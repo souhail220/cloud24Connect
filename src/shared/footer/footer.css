@@ -1,9 +1,9 @@
 /* Footer.css */
 .footer {
-  background: linear-gradient(to bottom, #00008b, #00004d);
+  background: linear-gradient(to bottom, #05058c, #00004d);
   color: white;
   position: relative;
-  width: 100vw;
+  width: 99.3vw;
   margin-left: calc(50% - 50vw);
   box-sizing: border-box;
 }
@@ -83,6 +83,7 @@
 
 .menu h3 {
   margin-bottom: 10px;
+  color: #ffc400;
 }
 
 .menu ul {
@@ -144,6 +145,7 @@
 
 .privacy-link:hover {
   text-decoration: underline;
+  color: #ffc400;
 }
 
 .toggle {
@@ -176,7 +178,7 @@
 }
 
 .social-icon:hover {
-  color: #1e90ff;
+  color: #ffc400;
 }
 
 /* Media query for responsiveness */

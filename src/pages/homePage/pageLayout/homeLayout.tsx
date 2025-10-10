@@ -1,7 +1,10 @@
+import RessourcesComponents from "../components/RessourcesComponents";
+import "./homeLayout.css";
+
 const HomeLayout = () => {
   return (
     <div className="home-layout">
-      <main>Home</main>
+      <RessourcesComponents />
     </div>
   );
 };

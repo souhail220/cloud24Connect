@@ -1,0 +1,15 @@
+/* Home layout styles: header, sidebar, and main content area */
+.home-layout {
+  display: flex;
+  flex-direction: column;
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  gap: 0;
+  background-image: url(../../../assets/background-img1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 99.3vw;
+  margin-left: calc(50% - 50vw);
+  box-sizing: border-box;
+}
