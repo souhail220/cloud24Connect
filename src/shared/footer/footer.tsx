@@ -1,4 +1,12 @@
 // Footer.js
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebookF,
+  faLinkedinIn,
+  faXTwitter,
+  faYoutube,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
 import logo from "../../assets/logoCloud24connect-removebg-preview.png";
 import "./Footer.css";
 
@@ -145,7 +153,7 @@ const Footer = () => {
         </div>
         <hr className="separator" />
         <div className="privacy">
-          <span>© 2025 Cloud2Connect, Inc.</span>
+          <span>© 2025 Cloud2Connect, Inc., All rights reserved</span>
           <div className="privacy-links">
             <a href="#" className="privacy-link">
               Privacy policy
@@ -162,25 +170,19 @@ const Footer = () => {
           </div>
           <div className="social-icons">
             <a href="#">
-              <i className="fab fa-facebook-f"></i>
+              <FontAwesomeIcon icon={faFacebookF} className="social-icon" />
             </a>
             <a href="#">
-              <i className="fab fa-facebook-f"></i>
+              <FontAwesomeIcon icon={faLinkedinIn} className="social-icon" />
             </a>
             <a href="#">
-              <span className="social-icon" role="img" aria-label="Twitter">
-                🇽
-              </span>
+              <FontAwesomeIcon icon={faXTwitter} className="social-icon" />
             </a>
             <a href="#">
-              <span className="social-icon" role="img" aria-label="YouTube">
-                🇾
-              </span>
+              <FontAwesomeIcon icon={faYoutube} className="social-icon" />
             </a>
             <a href="#">
-              <span className="social-icon" role="img" aria-label="Instagram">
-                🇮
-              </span>
+              <FontAwesomeIcon icon={faInstagram} className="social-icon" />
             </a>
           </div>
         </div>
