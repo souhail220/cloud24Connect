@@ -1,0 +1,15 @@
+.card {
+  background: radial-gradient(circle at center, #ffffff 60%, #f0f0f0 100%);
+  color: black;
+  border-radius: 1rem; /* similar to rounded-2xl */
+  padding: 2rem; /* similar to p-8 */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  transform: translateY(0);
+}
+
+.card:hover {
+  background: #2b39cf;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+}
