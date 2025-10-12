@@ -1,16 +1,12 @@
-import './App.css'
-import HomeLayout from './pages/homePage/pageLayout/homeLayout'
-import Footer from './shared/footer/footer'
-import Navbar from './shared/navbar/navbar'
+import "./App.css";
+import HomeLayout from "./pages/homePage/pageLayout/homeLayout";
 
 function App() {
   return (
     <>
-    <Navbar />
-    <HomeLayout />
-    <Footer />
+      <HomeLayout />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

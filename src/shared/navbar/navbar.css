@@ -1,0 +1,8 @@
+.navbar-container {
+  background: linear-gradient(135deg, #05058c 0%, #2b39cf 100%);
+}
+
+.navlinks a:hover {
+  color: #ffc400; /* Coral color on hover */
+  transition: color 0.3s ease;
+}

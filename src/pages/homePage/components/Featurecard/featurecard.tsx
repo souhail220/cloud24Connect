@@ -10,7 +10,7 @@ import {
 const features = [
   {
     icon: (
-      <Zap className="text-[#2b39cf] w-10 h-10 mb-4 group-hover:text-white" />
+      <Zap className="text-orange-500 w-10 h-10 mb-4 group-hover:text-white" />
     ),
     title: "Accelerate website performance",
     description:
@@ -18,7 +18,7 @@ const features = [
   },
   {
     icon: (
-      <ShieldCheck className="text-[#2b39cf] w-10 h-10 mb-4 group-hover:text-white" />
+      <ShieldCheck className="text-orange-500 w-10 h-10 mb-4 group-hover:text-white" />
     ),
     title: "Block bot traffic",
     description:
@@ -26,7 +26,7 @@ const features = [
   },
   {
     icon: (
-      <Video className="text-[#2b39cf] w-10 h-10 mb-4 group-hover:text-white" />
+      <Video className="text-orange-500 w-10 h-10 mb-4 group-hover:text-white" />
     ),
     title: "Optimize video experiences",
     description:
@@ -34,7 +34,7 @@ const features = [
   },
   {
     icon: (
-      <Cloud className="text-[#2b39cf] w-10 h-10 mb-4 group-hover:text-white" />
+      <Cloud className="text-orange-500 w-10 h-10 mb-4 group-hover:text-white" />
     ),
     title: "Deploy serverless code",
     description:
@@ -42,14 +42,14 @@ const features = [
   },
   {
     icon: (
-      <Network className="text-[#2b39cf] w-10 h-10 mb-4 group-hover:text-white" />
+      <Network className="text-orange-500 w-10 h-10 mb-4 group-hover:text-white" />
     ),
     title: "Deploy AI on the edge",
     description: "Use AI models close to users to minimize latency and cost.",
   },
   {
     icon: (
-      <Database className="text-[#2b39cf] w-10 h-10 mb-4 group-hover:text-white" />
+      <Database className="text-orange-500 w-10 h-10 mb-4 group-hover:text-white" />
     ),
     title: "Eliminate egress fees for object storage",
     description:

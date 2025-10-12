@@ -5,11 +5,25 @@
   font-family: "Inter", sans-serif;
   min-height: 100vh;
   gap: 0;
+  width: 99.3vw;
+  margin-left: calc(50% - 50vw);
+  box-sizing: border-box;
+}
+
+.main-content {
   background-image: url(../../../assets/background-img1.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 99.3vw;
-  margin-left: calc(50% - 50vw);
+  min-height: calc(
+    100vh - 70px
+  ); /* ensure it fills the viewport minus navbar height */
+  overflow-y: auto; /* scroll if content too tall */
   box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .home-layout {
+    padding: 1rem; /* reduce padding on smaller screens */
+  }
 }
