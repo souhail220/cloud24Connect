@@ -13,6 +13,7 @@ const HomeLayout = () => {
       <main className="main-content">
         <HeroSection />
         <Featurecard />
+        <hr className="separator" />
         <RessourcesComponents />
       </main>
       <Footer />

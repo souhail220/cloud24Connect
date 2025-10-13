@@ -3,8 +3,7 @@
   background: linear-gradient(135deg, #05058c, #00004d);
   color: white;
   position: relative;
-  width: 99.3vw;
-  margin-left: calc(50% - 50vw);
+  width: 100%;
   box-sizing: border-box;
 }
 

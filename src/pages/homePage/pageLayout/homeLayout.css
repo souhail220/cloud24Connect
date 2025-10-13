@@ -3,10 +3,8 @@
   display: flex;
   flex-direction: column;
   font-family: "Inter", sans-serif;
-  min-height: 100vh;
   gap: 0;
-  width: 99.3vw;
-  margin-left: calc(50% - 50vw);
+  width: 100%;
   box-sizing: border-box;
 }
 
@@ -20,6 +18,13 @@
   ); /* ensure it fills the viewport minus navbar height */
   overflow-y: auto; /* scroll if content too tall */
   box-sizing: border-box;
+}
+
+.separator {
+  width: 100%;
+  border: none;
+  border-top: 1px solid #5c6eff; /* Subtle white line with transparency */
+  margin-top: 40px;
 }
 
 @media (max-width: 768px) {

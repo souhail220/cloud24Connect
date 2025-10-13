@@ -1,14 +1,7 @@
-import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import "./navbar.css";
 
 const Navbar = () => {
-  const [openMenu, setOpenMenu] = useState<string | null>(null);
-
-  const toggleMenu = (menu: string) => {
-    setOpenMenu(openMenu === menu ? null : menu);
-  };
-
   return (
     <nav className="fixed top-0 left-0 w-full text-white z-50 navbar-container">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-8 py-4">
