@@ -12,7 +12,7 @@ export default {
         secondary: {
           DEFAULT: "#ff9a00",
           light: "#ffc400",
-          dark: "#cc7a00",
+          dark: "#f97316",
         },
         background: "#d0e3f6ff",
       },

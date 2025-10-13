@@ -9,13 +9,10 @@
 }
 
 .main-content {
-  background-image: url(../../../assets/background-img1.jpg);
+  background: linear-gradient(#194afd, #325afa, #5467ff);
+  /*  background-image: url("../../../assets/background-img2.png");*/
   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: calc(
-    100vh - 70px
-  ); /* ensure it fills the viewport minus navbar height */
+  min-height: calc(100vh - 70px); /* ensure it fills the viewport minus navbar height */
   overflow-y: auto; /* scroll if content too tall */
   box-sizing: border-box;
 }
@@ -23,7 +20,7 @@
 .separator {
   width: 100%;
   border: none;
-  border-top: 1px solid #5c6eff; /* Subtle white line with transparency */
+  border-top: 1px solid #b4b4b4;
   margin-top: 40px;
 }
 

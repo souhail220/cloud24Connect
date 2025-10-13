@@ -6,7 +6,7 @@ import {
   faRobot,
   faCloud,
 } from "@fortawesome/free-solid-svg-icons";
-import "./ressourcesComponents.css";
+import "./resourcesComponents.css";
 
 const cards = [
   {
@@ -41,11 +41,11 @@ const cards = [
   },
 ];
 
-const RessourcesComponents = () => {
+const ResourcesComponents = () => {
   return (
-    <div className="ressource-container">
-      <h2 className="ressource-title">Ressources and Support</h2>
-      <p className="ressource-subtitle">
+    <div className="resource-container">
+      <h2 className="resource-title text-secondary">Resources and Support</h2>
+      <p className="resource-subtitle text-white">
         Our cloud is built to be simple and powerful, so you can spend your time
         focusing on building apps, not pulling your hair out.
       </p>
@@ -68,4 +68,4 @@ const RessourcesComponents = () => {
   );
 };
 
-export default RessourcesComponents;
+export default ResourcesComponents;
