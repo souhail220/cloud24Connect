@@ -1,0 +1,49 @@
+.getStarted-container {
+    background-image: url("../../../../assets/background-img1.jpg");
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+/* SponsorsScroller.css */
+.scroller-container {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    -webkit-mask-image: -webkit-linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0));
+    mask-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0));
+}
+
+.scroller-container:hover .scroller {
+    animation-play-state: paused;
+}
+
+.scroller {
+    display: flex;
+    flex-direction: row;
+    animation: scroll 20s linear infinite;
+}
+
+.scroller img {
+    margin: 0 20px;
+    height: 50px;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 768px) {
+    .scroller img {
+        height: 20px;
+        margin: 0 10px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .scroller img {
+        height: 25px;
+        margin: 0 15px;
+    }
+}
