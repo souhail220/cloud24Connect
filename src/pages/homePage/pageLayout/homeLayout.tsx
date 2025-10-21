@@ -1,5 +1,5 @@
 import Footer from "../../../shared/footer/footer";
-import Navbar from "../../../shared/navbar/navbar";
+import {Navbar} from "../../../shared/navbar/navbar";
 import Featurecard from "../components/Featurecard/featurecard";
 import HeroSection from "../components/HeroSection/HeroSection";
 import ResourcesComponents from "../components/RessourcesCards/ResourcesComponents.tsx";

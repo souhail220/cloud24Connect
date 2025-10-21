@@ -1,7 +1,7 @@
 import "./GetStarted.css"
-import visaLogo from '../../../../assets/visa.png';
-import toyotaLogo from '../../../../assets/toyota.png';
-import grokLogo from '../../../../assets/grok.png';
+import visaLogo from '../../../../assets/images/visa.png';
+import toyotaLogo from '../../../../assets/images/toyota.png';
+import grokLogo from '../../../../assets/images/grok.png';
 
 
 export const GetStartedComponent = () => {

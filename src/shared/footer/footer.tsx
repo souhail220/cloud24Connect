@@ -7,7 +7,7 @@ import {
   faYoutube,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
-import logo from "../../assets/logoCloud24connect-removebg-preview.png";
+import logo from "../../assets/images/logoCloud24connect-removebg-preview.png";
 import "./Footer.css";
 
 const Footer = () => {
