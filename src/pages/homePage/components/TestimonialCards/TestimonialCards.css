@@ -8,7 +8,7 @@
 .testimonial-scroller {
     display: flex;
     flex-direction: row;
-    /*animation: scroll 15s linear infinite;*/
+    animation: scroll 15s linear infinite;
 }
 
 .testimonial-container:hover .testimonial-scroller {
@@ -20,8 +20,7 @@
         transform: translateX(0);
     }
     100% {
-        /* Move by exactly (4 cards * 300px) + (3 gaps * 16px) = 1248px */
-        transform: translateX(-1248px);
+        transform: translateX(-30%);
     }
 }
 
@@ -30,73 +29,100 @@
     color: white;
     margin: 0 20px;
     border-radius: 20px;
-    width: 300px;
-    min-height: 400px;
+    min-height: 300px;
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
     position: relative;
-    background-size: cover; /* Ensures the image covers the entire card */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents image repetition */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.story-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    transition: opacity 0.5s ease-in-out; /* Fading animation */
+    z-index: 0;
+}
+
+.story-card:hover::before {
+    opacity: 0;
+}
+
+.top-half, .bottom-half {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    position: relative;
+    z-index: 1;
 }
 
 .top-half {
-    padding: 20px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
     justify-content: start;
-    position: relative;
-    z-index: 1;
 }
 
 .bottom-half {
-    padding: 20px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
     justify-content: end;
-    position: relative;
-    z-index: 1;
 }
 
 .card1 {
+    background-image: url('../../../../assets/images/tromba.jpg');
+}
+
+.card1::before {
     background: linear-gradient(to bottom,
     rgba(25, 1, 54, 1),
     rgba(47, 8, 93, 0.7),
     rgba(152, 61, 206, 0.3),
     rgba(47, 8, 93, 0.7),
     rgba(25, 1, 54, 1)
-    ), url('../../../../assets/images/tromba.jpg') no-repeat center;
-    background-size: cover;
+    );
+    opacity: 1;
 }
 
 .card2 {
+    background-image: url('../../../../assets/images/putin.jpg');
+}
+
+.card2::before {
     background: linear-gradient(to bottom,
     rgba(3, 8, 59, 1),
     rgba(11, 18, 94, 0.7),
     rgba(58, 77, 203, 0.5),
     rgba(11, 18, 94, 0.7),
     rgba(3, 8, 59, 1)
-    ), url('../../../../assets/images/putin.jpg') no-repeat center;
-    background-size: cover;
+    );
+    opacity: 1;
 }
 
 .card3 {
     background: rgb(5, 80, 68, 1);
-    background-size: cover;
+}
+
+.card3::before {
+    background: rgb(5, 80, 68, 1);
+    opacity: 1;
 }
 
 .card4 {
+    background-image: url('../../../../assets/images/tromba.jpg');
+}
+
+.card4::before {
     background: linear-gradient(to bottom,
     rgb(3, 8, 59, 1),
     rgba(58, 77, 203, 0.5),
     rgb(3, 8, 59, 1)
-    ), url('../../../../assets/images/tromba.jpg') no-repeat center;
-    background-size: cover;
+    );
+    opacity: 1;
 }
 
 .story-card img {
@@ -106,21 +132,43 @@
 }
 
 .story-card h3 {
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 20px;
+    font-weight: 800;
     margin-bottom: 8px;
+    transition: transform 0.5s ease-in-out;
 }
 
 .story-card p {
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: 14px;
+    font-weight: 600;
     margin-bottom: 8px;
+    transition: transform 0.5s ease-in-out;
 }
 
-.story-card a {
-    font-size: 16px;
-    text-decoration: underline;
+.story-card:hover p {
+    transform: translateY(-20px); /* Gently push text up */
+}
+
+.story-card:hover h3 {
+    transform: translateY(-10px); /* Gently push text up */
+}
+
+.story-card .case-study-link {
+    font-size: 15px;
     color: inherit;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.7s ease-in-out, max-height 0.7s ease-in-out;
+}
+
+.story-card:hover .case-study-link {
+    opacity: 1;
+    max-height: 50px;
+}
+
+.story-card .case-study-link:hover {
+    text-decoration: underline;
 }
 
 @media (max-width: 480px) {

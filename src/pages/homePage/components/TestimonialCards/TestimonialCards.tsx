@@ -1,4 +1,4 @@
-import "./TestemonialCards.css"
+import "./TestimonialCards.css"
 
 const TestimonialCards = () => {
     return (
@@ -12,6 +12,7 @@ const TestimonialCards = () => {
                     </div>
                     <div className="bottom-half">
                         <p>Not only about the price, but about providing a quality improving support and finding our business. Led us to lean now on DigitalOcean.</p>
+                        <a href="#" className="case-study-link">Read case study <i className="fas fa-arrow-right"></i> </a>
                     </div>
                 </div>
                 <div className="story-card card2">
@@ -21,6 +22,7 @@ const TestimonialCards = () => {
                     </div>
                     <div className="bottom-half">
                         <p>Amorphous Data on Cloud24Connect GPU and Kubernetes</p>
+                        <a href="#" className="case-study-link">Read case study <i className="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div className="story-card card3">
@@ -31,17 +33,17 @@ const TestimonialCards = () => {
                     </div>
                     <div className="bottom-half">
                         <p>We were previously on AWS but started migrating everything because we really love Cloud24Connect in terms of cost and support. We saved a lot of money— $120,000 to $30,000 [per month]</p>
-                        <a href="#">Read case study &gt;</a>
+                        <a href="#" className="case-study-link">Read case study <i className="fas fa-arrow-right" /></a>
                     </div>
                 </div>
                 <div className="story-card card4">
                     <div className="top-half">
                         <h3>Matt Gray</h3>
                         <p>CEO, Served Hosting</p>
-                        {/*<img src="placeholder.jpg" alt="Matt Gray" />*/}
                     </div>
                     <div className="bottom-half">
                         <p>How Served Scaled Their Craft CMS Platform with Cloud24Connect Kubernetes</p>
+                        <a href="#" className="case-study-link">Read case study <i className="fas fa-arrow-right" /></a>
                     </div>
                 </div>
                 {/* Duplicate for seamless scroll */}
@@ -53,16 +55,17 @@ const TestimonialCards = () => {
                     </div>
                     <div className="bottom-half">
                         <p>Not only about the price, but about providing a quality improving support and finding our business. Led us to lean now on DigitalOcean.</p>
+                        <a href="#" className="case-study-link">Read case study <i className="fas fa-arrow-right" /></a>
                     </div>
                 </div>
                 <div className="story-card card2">
                     <div className="top-half">
                         <h3>Richard Li</h3>
                         <p>CEO & Founder, Amorphous Data</p>
-                        {/*<img src="../../../../assets/images/grok.png" alt="Richard Li" />*/}
                     </div>
                     <div className="bottom-half">
                         <p>Amorphous Data on Cloud24Connect GPU and Kubernetes</p>
+                        <a href="#" className="case-study-link">Read case study <i className="fas fa-arrow-right" /></a>
                     </div>
                 </div>
                 <div className="story-card card3">
@@ -73,17 +76,17 @@ const TestimonialCards = () => {
                     </div>
                     <div className="bottom-half">
                         <p>We were previously on AWS but started migrating everything because we really love Cloud24Connect in terms of cost and support. We saved a lot of money— $120,000 to $30,000 [per month]</p>
-                        <a href="#">Read case study &gt;</a>
+                        <a href="#" className="case-study-link">Read case study <i className="fas fa-arrow-right" /></a>
                     </div>
                 </div>
                 <div className="story-card card4">
                     <div className="top-half">
                         <h3>Matt Gray</h3>
                         <p>CEO, Served Hosting</p>
-                        {/*<img src="placeholder.jpg" alt="Matt Gray" />*/}
                     </div>
                     <div className="bottom-half">
                         <p>How Served Scaled Their Craft CMS Platform with Cloud24Connect Kubernetes</p>
+                        <a href="#" className="case-study-link">Read case study <i className="fas fa-arrow-right" /></a>
                     </div>
                 </div>
                 {/* Duplicate for seamless scroll */}
@@ -95,16 +98,17 @@ const TestimonialCards = () => {
                     </div>
                     <div className="bottom-half">
                         <p>Not only about the price, but about providing a quality improving support and finding our business. Led us to lean now on DigitalOcean.</p>
+                        <a href="#" className="case-study-link">Read case study <i className="fas fa-arrow-right" /></a>
                     </div>
                 </div>
                 <div className="story-card card2">
                     <div className="top-half">
                         <h3>Richard Li</h3>
                         <p>CEO & Founder, Amorphous Data</p>
-                        {/*<img src="../../../../assets/images/grok.png" alt="Richard Li" />*/}
                     </div>
                     <div className="bottom-half">
                         <p>Amorphous Data on Cloud24Connect GPU and Kubernetes</p>
+                        <a href="#" className="case-study-link">Read case study <i className="fas fa-arrow-right" /></a>
                     </div>
                 </div>
                 <div className="story-card card3">
@@ -115,17 +119,17 @@ const TestimonialCards = () => {
                     </div>
                     <div className="bottom-half">
                         <p>We were previously on AWS but started migrating everything because we really love Cloud24Connect in terms of cost and support. We saved a lot of money— $120,000 to $30,000 [per month]</p>
-                        <a href="#">Read case study &gt;</a>
+                        <a href="#" className="case-study-link">Read case study <i className="fas fa-arrow-right" /></a>
                     </div>
                 </div>
                 <div className="story-card card4">
                     <div className="top-half">
                         <h3>Matt Gray</h3>
                         <p>CEO, Served Hosting</p>
-                        {/*<img src="placeholder.jpg" alt="Matt Gray" />*/}
                     </div>
                     <div className="bottom-half">
                         <p>How Served Scaled Their Craft CMS Platform with Cloud24Connect Kubernetes</p>
+                        <a href="#" className="case-study-link">Read case study <i className="fas fa-arrow-right" /></a>
                     </div>
                 </div>
             </div>

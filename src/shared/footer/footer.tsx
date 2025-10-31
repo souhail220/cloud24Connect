@@ -7,7 +7,7 @@ import {
   faYoutube,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
-import logo from "../../assets/images/logoCloud24connect-removebg-preview.png";
+import logo from "../../assets/images/cloud24Logo-white.png";
 import "./Footer.css";
 
 const Footer = () => {
@@ -17,9 +17,9 @@ const Footer = () => {
         <div className="top">
           <div className="logo-section">
             <div className="logo-container">
-              <img className="logo-icon" src={logo} alt="Cloud2Connect Logo" />
+              <img className="logo-icon" src={logo} alt="Cloud2Connect Logo"/>
               <div className="logo-text">
-                <h2>Cloud2Connect</h2>
+                <h2>Cloud24Connect</h2>
                 <p>PERFORMANCE CLOUD</p>
               </div>
             </div>

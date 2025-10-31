@@ -1,6 +1,7 @@
 import "./navbar.css";
 import {useState} from "react";
 import Dropdown from "./Dropdown";
+import logo from "../../assets/images/cloud24Logo-wordless.png";
 
 export const Navbar = () => {
 
@@ -14,8 +15,8 @@ export const Navbar = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between px-8 py-4">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <img src="../../assets/images/logoCloud24connect-removebg-preview.png" alt="Logo" className="h-8" />
-          <span className="font-semibold text-lg">Cloud2Connect</span>
+          <img src={logo} alt="Logo" className="h-8" />
+          <span className="font-semibold text-lg text-secondary">Cloud24Connect</span>
         </div>
 
         {/* Links */}

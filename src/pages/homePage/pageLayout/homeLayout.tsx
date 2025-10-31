@@ -4,7 +4,7 @@ import Featurecard from "../components/Featurecard/featurecard";
 import HeroSection from "../components/HeroSection/HeroSection";
 import ResourcesComponents from "../components/RessourcesCards/ResourcesComponents.tsx";
 import {GetStartedComponent} from "../components/GetStarted/GetStartedComponent.tsx";
-import TestimonialCards from "../components/TestemonialCards/TestimonialCards.tsx";
+import TestimonialCards from "../components/TestimonialCards/TestimonialCards.tsx";
 
 import "./homeLayout.css";
 
