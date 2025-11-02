@@ -8,7 +8,7 @@ import {
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 import logo from "../../assets/images/cloud24Logo-white.png";
-import "./Footer.css";
+import "./footer.css";
 
 const Footer = () => {
   return (
