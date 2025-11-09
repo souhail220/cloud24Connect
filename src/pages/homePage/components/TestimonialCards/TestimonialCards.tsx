@@ -27,12 +27,11 @@ const TestimonialCards = () => {
                 </div>
                 <div className="story-card card3">
                     <div className="top-half">
-                        <h3>picap</h3>
-                        <p>Andres Murcia</p>
+                        <h3>Andres Murcia</h3>
                         <p>CTO, Picap</p>
                     </div>
                     <div className="bottom-half">
-                        <p>We were previously on AWS but started migrating everything because we really love Cloud24Connect in terms of cost and support. We saved a lot of money— $120,000 to $30,000 [per month]</p>
+                        <p>We were previously on AWS but started migrating everything because we really love Cloud24Connect in terms of cost and support.</p>
                         <a href="#" className="case-study-link">Read case study <i className="fas fa-arrow-right" /></a>
                     </div>
                 </div>
@@ -70,12 +69,11 @@ const TestimonialCards = () => {
                 </div>
                 <div className="story-card card3">
                     <div className="top-half">
-                        <h3>picap</h3>
-                        <p>Andres Murcia</p>
+                        <h3>Andres Murcia</h3>
                         <p>CTO, Picap</p>
                     </div>
                     <div className="bottom-half">
-                        <p>We were previously on AWS but started migrating everything because we really love Cloud24Connect in terms of cost and support. We saved a lot of money— $120,000 to $30,000 [per month]</p>
+                        <p>We were previously on AWS but started migrating everything because we really love Cloud24Connect in terms of cost and support.</p>
                         <a href="#" className="case-study-link">Read case study <i className="fas fa-arrow-right" /></a>
                     </div>
                 </div>
@@ -113,12 +111,11 @@ const TestimonialCards = () => {
                 </div>
                 <div className="story-card card3">
                     <div className="top-half">
-                        <h3>picap</h3>
-                        <p>Andres Murcia</p>
+                        <h3>Andres Murcia</h3>
                         <p>CTO, Picap</p>
                     </div>
                     <div className="bottom-half">
-                        <p>We were previously on AWS but started migrating everything because we really love Cloud24Connect in terms of cost and support. We saved a lot of money— $120,000 to $30,000 [per month]</p>
+                        <p>We were previously on AWS but started migrating everything because we really love Cloud24Connect in terms of cost and support.</p>
                         <a href="#" className="case-study-link">Read case study <i className="fas fa-arrow-right" /></a>
                     </div>
                 </div>

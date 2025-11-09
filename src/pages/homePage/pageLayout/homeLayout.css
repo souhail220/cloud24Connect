@@ -26,6 +26,5 @@
 
 @media (max-width: 768px) {
   .home-layout {
-    padding: 1rem; /* reduce padding on smaller screens */
   }
 }

@@ -7,11 +7,11 @@ export default {
         primary: {
           DEFAULT: "#2b39cf", // main brand color
           light: "#5c6eff",
-          dark: "#05058c",
+          dark: "#020257",
         },
         secondary: {
-          DEFAULT: "#ff9a00",
-          light: "#ffc400",
+          DEFAULT: "#ff9100",
+          light: "#fa9c0e",
           dark: "#f97316",
         },
         background: "#d0e3f6ff",
