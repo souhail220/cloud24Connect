@@ -35,20 +35,17 @@ export default function HeroSection() {
                     </div>
                 </div>
 
-                <div className="mt-20 relative animate-fade-in-up animation-delay-300">
-                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl blur-3xl opacity-20 animate-pulse-slow"></div>
-                    <div className="relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 shadow-2xl border border-gray-700 text-start">
-                        <div className="flex space-x-2 mb-4">
-                            <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                            <div className="w-3 h-3 rounded-full bg-amber-500"></div>
-                            <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                        </div>
-                        <div className="space-y-3 font-mono text-sm">
-                            <div className="text-gray-400">$ cloud24connect deploy --production</div>
-                            <div className="text-emerald-400">✓ Infrastructure provisioned</div>
-                            <div className="text-emerald-400">✓ Services deployed successfully</div>
-                            <div className="text-cyan-400">→ Your application is live at https://your-app.cloud24connect.com</div>
-                        </div>
+                <div className="snippet-container bg-gradient-to-br from-gray-900 to-gray-800">
+                    <div className="window-controls">
+                        <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div className="w-3 h-3 rounded-full bg-amber-500"></div>
+                        <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                    </div>
+                    <div className="terminal-content">
+                        <div className="text-gray-400">$ cloud24connect deploy --production</div>
+                        <div className="text-emerald-400">✓ Infrastructure provisioned</div>
+                        <div className="text-emerald-400">✓ Services deployed successfully</div>
+                        <div className="text-cyan-400">→ Your application is live at https://your-app.cloud24connect.com</div>
                     </div>
                 </div>
             </div>
