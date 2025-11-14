@@ -1,12 +1,12 @@
 import Footer from "../../../shared/footer/footer";
 import {Navbar} from "../../../shared/navbar/navbar";
-import Featurecard from "../components/Featurecard/featurecard";
 import HeroSection from "../components/HeroSection/HeroSection";
 import ResourcesComponents from "../components/RessourcesCards/ResourcesComponents.tsx";
 import {GetStartedComponent} from "../components/GetStarted/GetStartedComponent.tsx";
 import TestimonialCards from "../components/TestimonialCards/TestimonialCards.tsx";
 
 import "./homeLayout.css";
+import {Features} from "../components/Featurecard/Features.tsx";
 
 const HomeLayout = () => {
   return (
@@ -14,7 +14,7 @@ const HomeLayout = () => {
       <Navbar />
       <main className="main-content">
           <HeroSection />
-          <Featurecard />
+          <Features />
           <hr className="separator" />
           <TestimonialCards />
           <hr className="separator" />
