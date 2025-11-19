@@ -2,6 +2,8 @@ import "./GetStarted.css"
 import visaLogo from '../../../../assets/images/visa.png';
 import toyotaLogo from '../../../../assets/images/toyota.png';
 import grokLogo from '../../../../assets/images/grok.png';
+import appleLogo from '../../../../assets/images/apple.png';
+import teamCherryLogo from '../../../../assets/images/teamCherry.png';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 
 const benefits = [
@@ -60,29 +62,41 @@ export const GetStartedComponent = () => {
                     <p className="text-white mb-6">Trusted by companies like</p>
                     <div className="scroller-container">
                         <div className="scroller">
-                            <img src={toyotaLogo} alt="Nobid" />
-                            <img src={visaLogo} alt="Aquazeel" />
-                            <img src={grokLogo} alt="Scraperapi" />
-                            <img src={toyotaLogo} alt="Nobid" />
-                            <img src={visaLogo} alt="Aquazeel" />
+                            <img src={toyotaLogo} alt="Toyota" />
+                            <img src={visaLogo} alt="Visa" />
+                            <img src={grokLogo} alt="Grok" />
+                            <img src={appleLogo} alt="Apple"/>
+                            <img src={teamCherryLogo} alt="Team Cherry"/>
                             {/* Duplicate for seamless scroll */}
-                            <img src={toyotaLogo} alt="Nobid" />
-                            <img src={visaLogo} alt="Aquazeel" />
-                            <img src={grokLogo} alt="Scraperapi" />
-                            <img src={toyotaLogo} alt="Nobid" />
-                            <img src={visaLogo} alt="Aquazeel" />
+                            <img src={toyotaLogo} alt="Toyota" />
+                            <img src={visaLogo} alt="Visa" />
+                            <img src={grokLogo} alt="Grok" />
+                            <img src={appleLogo} alt="Apple"/>
+                            <img src={teamCherryLogo} alt="Team Cherry"/>
                             {/* Duplicate for seamless scroll */}
-                            <img src={toyotaLogo} alt="Nobid" />
-                            <img src={visaLogo} alt="Aquazeel" />
-                            <img src={grokLogo} alt="Scraperapi" />
-                            <img src={toyotaLogo} alt="Nobid" />
-                            <img src={visaLogo} alt="Aquazeel" />
+                            <img src={toyotaLogo} alt="Toyota" />
+                            <img src={visaLogo} alt="Visa" />
+                            <img src={grokLogo} alt="Grok" />
+                            <img src={appleLogo} alt="Apple"/>
+                            <img src={teamCherryLogo} alt="Team Cherry"/>
                             {/* Duplicate for seamless scroll */}
-                            <img src={toyotaLogo} alt="Nobid" />
-                            <img src={visaLogo} alt="Aquazeel" />
-                            <img src={grokLogo} alt="Scraperapi" />
-                            <img src={toyotaLogo} alt="Nobid" />
-                            <img src={visaLogo} alt="Aquazeel" />
+                            <img src={toyotaLogo} alt="Toyota" />
+                            <img src={visaLogo} alt="Visa" />
+                            <img src={grokLogo} alt="Grok" />
+                            <img src={appleLogo} alt="Apple"/>
+                            <img src={teamCherryLogo} alt="Team Cherry"/>
+                            {/* Duplicate for seamless scroll */}
+                            <img src={toyotaLogo} alt="Toyota" />
+                            <img src={visaLogo} alt="Visa" />
+                            <img src={grokLogo} alt="Grok" />
+                            <img src={appleLogo} alt="Apple"/>
+                            <img src={teamCherryLogo} alt="Team Cherry"/>
+                            {/* Duplicate for seamless scroll */}
+                            <img src={toyotaLogo} alt="Toyota" />
+                            <img src={visaLogo} alt="Visa" />
+                            <img src={grokLogo} alt="Grok" />
+                            <img src={appleLogo} alt="Apple"/>
+                            <img src={teamCherryLogo} alt="Team Cherry"/>
                         </div>
                     </div>
                 </div>

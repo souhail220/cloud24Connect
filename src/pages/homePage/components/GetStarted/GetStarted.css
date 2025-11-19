@@ -26,7 +26,8 @@
 
 .scroller img {
     margin: 0 20px;
-    height: 50px;
+    height: 70px;
+    width: 70px;
 }
 
 @keyframes scroll {
@@ -36,14 +37,16 @@
 
 @media (max-width: 768px) {
     .scroller img {
-        height: 20px;
+        height: 50px;
+        width: 50px;
         margin: 0 10px;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
     .scroller img {
-        height: 25px;
+        height: 70px;
+        width: 70px;
         margin: 0 15px;
     }
 }
