@@ -1,134 +1,102 @@
 import "./TestimonialCards.css"
 
+const testimonials = [
+    {
+        initials: "BO",
+        name: "Bohdan Shenko",
+        role: "Founder, D, Cyprus, Tango",
+        quote:
+            "Not only about the price, but about providing a quality improving support and finding our business. Led us to lean now on DigitalOcean.",
+    },
+    {
+        name: "Richard Li",
+        role: "CEO & Founder, Amorphous Data",
+        quote: "Amorphous Data on Cloud24Connect GPU and Kubernetes",
+    },
+    {
+        name: "Andres Murcia",
+        role: "CTO, Picap",
+        quote:
+            "We were previously on AWS but started migrating everything because we really love Cloud24Connect in terms of cost and support.",
+    },
+    {
+        name: "Matt Gray",
+        role: "CEO, Served Hosting",
+        quote:
+            "How Served Scaled Their Craft CMS Platform with Cloud24Connect Kubernetes",
+    },
+    {
+        initials: "BO",
+        name: "Bohdan Shenko",
+        role: "Founder, D, Cyprus, Tango",
+        quote:
+            "Not only about the price, but about providing a quality improving support and finding our business. Led us to lean now on DigitalOcean.",
+    },
+    {
+        name: "Richard Li",
+        role: "CEO & Founder, Amorphous Data",
+        quote: "Amorphous Data on Cloud24Connect GPU and Kubernetes",
+    },
+    {
+        name: "Andres Murcia",
+        role: "CTO, Picap",
+        quote:
+            "We were previously on AWS but started migrating everything because we really love Cloud24Connect in terms of cost and support.",
+    },
+    {
+        name: "Matt Gray",
+        role: "CEO, Served Hosting",
+        quote:
+            "How Served Scaled Their Craft CMS Platform with Cloud24Connect Kubernetes",
+    },
+    {
+        initials: "BO",
+        name: "Bohdan Shenko",
+        role: "Founder, D, Cyprus, Tango",
+        quote:
+            "Not only about the price, but about providing a quality improving support and finding our business. Led us to lean now on DigitalOcean.",
+    },
+    {
+        name: "Richard Li",
+        role: "CEO & Founder, Amorphous Data",
+        quote: "Amorphous Data on Cloud24Connect GPU and Kubernetes",
+    },
+    {
+        name: "Andres Murcia",
+        role: "CTO, Picap",
+        quote:
+            "We were previously on AWS but started migrating everything because we really love Cloud24Connect in terms of cost and support.",
+    },
+    {
+        name: "Matt Gray",
+        role: "CEO, Served Hosting",
+        quote:
+            "How Served Scaled Their Craft CMS Platform with Cloud24Connect Kubernetes",
+    },
+];
+
 const TestimonialCards = () => {
     return (
         <div className="testimonial-container">
+            <h2 className="testimonial-header font-bold bg-gradient-to-r from-secondary-dark to-secondary-light bg-clip-text text-transparent">
+                Customers growing with Cloud24Connect
+            </h2>
+            <p className="testimonial-description">See how developers and startups around the globe are building and scaling their applications on Cloud24Connect while saving money.</p>
             <div className="testimonial-scroller">
-                <div className="story-card card1">
-                    <div className="top-half">
-                        <h3>BO</h3>
-                        <p>Bohdan Shenko</p>
-                        <p>Founder, D, Cyprus, Tango</p>
-                    </div>
-                    <div className="bottom-half">
-                        <p>Not only about the price, but about providing a quality improving support and finding our business. Led us to lean now on DigitalOcean.</p>
-                        <a href="#" className="case-study-link">Read case study <i className="fas fa-arrow-right"></i> </a>
-                    </div>
-                </div>
-                <div className="story-card card2">
-                    <div className="top-half">
-                        <h3>Richard Li</h3>
-                        <p>CEO & Founder, Amorphous Data</p>
-                    </div>
-                    <div className="bottom-half">
-                        <p>Amorphous Data on Cloud24Connect GPU and Kubernetes</p>
-                        <a href="#" className="case-study-link">Read case study <i className="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div className="story-card card3">
-                    <div className="top-half">
-                        <h3>Andres Murcia</h3>
-                        <p>CTO, Picap</p>
-                    </div>
-                    <div className="bottom-half">
-                        <p>We were previously on AWS but started migrating everything because we really love Cloud24Connect in terms of cost and support.</p>
-                        <a href="#" className="case-study-link">Read case study <i className="fas fa-arrow-right" /></a>
-                    </div>
-                </div>
-                <div className="story-card card4">
-                    <div className="top-half">
-                        <h3>Matt Gray</h3>
-                        <p>CEO, Served Hosting</p>
-                    </div>
-                    <div className="bottom-half">
-                        <p>How Served Scaled Their Craft CMS Platform with Cloud24Connect Kubernetes</p>
-                        <a href="#" className="case-study-link">Read case study <i className="fas fa-arrow-right" /></a>
-                    </div>
-                </div>
-                {/* Duplicate for seamless scroll */}
-                <div className="story-card card1">
-                    <div className="top-half">
-                        <h3>BO</h3>
-                        <p>Bohdan Shenko</p>
-                        <p>Founder, D, Cyprus, Tango</p>
-                    </div>
-                    <div className="bottom-half">
-                        <p>Not only about the price, but about providing a quality improving support and finding our business. Led us to lean now on DigitalOcean.</p>
-                        <a href="#" className="case-study-link">Read case study <i className="fas fa-arrow-right" /></a>
-                    </div>
-                </div>
-                <div className="story-card card2">
-                    <div className="top-half">
-                        <h3>Richard Li</h3>
-                        <p>CEO & Founder, Amorphous Data</p>
-                    </div>
-                    <div className="bottom-half">
-                        <p>Amorphous Data on Cloud24Connect GPU and Kubernetes</p>
-                        <a href="#" className="case-study-link">Read case study <i className="fas fa-arrow-right" /></a>
-                    </div>
-                </div>
-                <div className="story-card card3">
-                    <div className="top-half">
-                        <h3>Andres Murcia</h3>
-                        <p>CTO, Picap</p>
-                    </div>
-                    <div className="bottom-half">
-                        <p>We were previously on AWS but started migrating everything because we really love Cloud24Connect in terms of cost and support.</p>
-                        <a href="#" className="case-study-link">Read case study <i className="fas fa-arrow-right" /></a>
-                    </div>
-                </div>
-                <div className="story-card card4">
-                    <div className="top-half">
-                        <h3>Matt Gray</h3>
-                        <p>CEO, Served Hosting</p>
-                    </div>
-                    <div className="bottom-half">
-                        <p>How Served Scaled Their Craft CMS Platform with Cloud24Connect Kubernetes</p>
-                        <a href="#" className="case-study-link">Read case study <i className="fas fa-arrow-right" /></a>
-                    </div>
-                </div>
-                {/* Duplicate for seamless scroll */}
-                <div className="story-card card1">
-                    <div className="top-half">
-                        <h3>BO</h3>
-                        <p>Bohdan Shenko</p>
-                        <p>Founder, D, Cyprus, Tango</p>
-                    </div>
-                    <div className="bottom-half">
-                        <p>Not only about the price, but about providing a quality improving support and finding our business. Led us to lean now on DigitalOcean.</p>
-                        <a href="#" className="case-study-link">Read case study <i className="fas fa-arrow-right" /></a>
-                    </div>
-                </div>
-                <div className="story-card card2">
-                    <div className="top-half">
-                        <h3>Richard Li</h3>
-                        <p>CEO & Founder, Amorphous Data</p>
-                    </div>
-                    <div className="bottom-half">
-                        <p>Amorphous Data on Cloud24Connect GPU and Kubernetes</p>
-                        <a href="#" className="case-study-link">Read case study <i className="fas fa-arrow-right" /></a>
-                    </div>
-                </div>
-                <div className="story-card card3">
-                    <div className="top-half">
-                        <h3>Andres Murcia</h3>
-                        <p>CTO, Picap</p>
-                    </div>
-                    <div className="bottom-half">
-                        <p>We were previously on AWS but started migrating everything because we really love Cloud24Connect in terms of cost and support.</p>
-                        <a href="#" className="case-study-link">Read case study <i className="fas fa-arrow-right" /></a>
-                    </div>
-                </div>
-                <div className="story-card card4">
-                    <div className="top-half">
-                        <h3>Matt Gray</h3>
-                        <p>CEO, Served Hosting</p>
-                    </div>
-                    <div className="bottom-half">
-                        <p>How Served Scaled Their Craft CMS Platform with Cloud24Connect Kubernetes</p>
-                        <a href="#" className="case-study-link">Read case study <i className="fas fa-arrow-right" /></a>
-                    </div>
-                </div>
+                {
+                    testimonials.map((card, i) =>(
+                        <div key={i} className={`story-card card${(i % 4) + 1}`}>
+                            <div className="top-half">
+                                <h3>{card.name}</h3>
+                                <p>{card.role}</p>
+                            </div>
+                            <div className="bottom-half">
+                                <p className="clamp">{card.quote}</p>
+                                <a href="#" className="case-study-link">Read case study <i className="fas fa-arrow-right" /></a>
+                            </div>
+                        </div>
+                    ) )
+                }
             </div>
         </div>
     );
