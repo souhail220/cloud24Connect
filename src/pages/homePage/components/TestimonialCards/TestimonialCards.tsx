@@ -77,7 +77,7 @@ const testimonials = [
 
 const TestimonialCards = () => {
     return (
-        <div className="testimonial-container">
+        <div className="testimonial-container bg-gradient-to-b from-primary-dark to-primary">
             <h2 className="testimonial-header font-bold bg-gradient-to-r from-secondary-dark to-secondary-light bg-clip-text text-transparent">
                 Customers growing with Cloud24Connect
             </h2>

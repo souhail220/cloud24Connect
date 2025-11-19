@@ -43,8 +43,8 @@ const cards = [
 
 const ResourcesComponents = () => {
   return (
-    <div className="resource-container">
-      <h2 className="resource-title text-secondary">Resources and Support</h2>
+    <div className="resource-container bg-gradient-to-b from-primary to-primary">
+      <h2 className="text-2xl lg:text-4xl xl:text-5xl font-bold text-secondary">Resources and Support</h2>
       <p className="resource-subtitle text-white">
         Our cloud is built to be simple and powerful, so you can spend your time
         focusing on building apps, not pulling your hair out.

@@ -9,7 +9,6 @@
 }
 
 .main-content {
-  background: linear-gradient(#194afd, #325afa, #5467ff);
   /*  background-image: url("../../../assets/background-img2.png");*/
   background-size: cover;
   min-height: calc(100vh - 70px); /* ensure it fills the viewport minus navbar height */
