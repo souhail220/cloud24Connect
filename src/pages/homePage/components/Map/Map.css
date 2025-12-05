@@ -1,0 +1,12 @@
+.map{
+    position: relative;
+    padding: 8rem 1rem 5rem;
+    overflow: hidden;
+}
+.title{
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    line-height: 1.25;
+}
