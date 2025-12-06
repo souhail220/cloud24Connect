@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from 'react-router-dom';
 import logo from "../../assets/images/cloud24Logo-wordless.png";
 import { Menu, X } from "lucide-react";
 import {DesktopMenu} from "./menus/DesktopMenu.tsx";
@@ -25,12 +26,12 @@ export const Navbar = () => {
 
                 {/* Desktop Actions */}
                 <div className="flex items-center gap-3">
-                    <button className="text-sm border border-transparent hover:border-secondary-light rounded-md px-4 py-2 transition-colors">
-                        Log in
-                    </button>
-                    <button className="bg-secondary-dark hover:bg-secondary text-white text-sm px-4 py-2 rounded-md transition-colors shadow-md">
-                        Get Started
-                    </button>
+                    <Link to="/login" className="text-sm border border-transparent hover:border-secondary-light rounded-md px-4 py-2 transition-colors">
+                        Sign In
+                    </Link>
+                    <Link to="/signup" className="bg-secondary-dark hover:bg-secondary text-white text-sm px-4 py-2 rounded-md transition-colors shadow-md">
+                        Sign Up
+                    </Link>
                 </div>
 
                 {/* Language Switcher */}
