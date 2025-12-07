@@ -8,6 +8,7 @@ export interface DropdownItem {
 export interface NavItem {
     id: number;
     label: string;
+    link: string;
     dropdownItems?: DropdownItem[];
 }
 
@@ -21,6 +22,7 @@ export const NAV_ITEMS: NavItem[] = [
     {
         id: 1,
         label: 'Docs',
+        link: '/pricing',
         dropdownItems: [
             {
                 title: 'Getting Started',
@@ -51,6 +53,7 @@ export const NAV_ITEMS: NavItem[] = [
     {
         id: 2,
         label: 'Support',
+        link: '/pricing',
         dropdownItems: [
             {
                 title: 'Help Center',
@@ -81,6 +84,7 @@ export const NAV_ITEMS: NavItem[] = [
     {
         id: 3,
         label: 'Contact Sales',
+        link: '/pricing',
         dropdownItems: [
             {
                 title: 'Request Demo',
@@ -111,6 +115,7 @@ export const NAV_ITEMS: NavItem[] = [
     {
         id: 4,
         label: 'Products',
+        link: '/pricing',
         dropdownItems: [
             {
                 title: 'Cloud Connect',
@@ -147,6 +152,7 @@ export const NAV_ITEMS: NavItem[] = [
     {
         id: 5,
         label: 'Company',
+        link: '/pricing',
         dropdownItems: [
             {
                 title: 'About Us',
@@ -183,6 +189,7 @@ export const NAV_ITEMS: NavItem[] = [
     {
         id: 6,
         label: 'Pricing',
+        link: '/pricing',
         dropdownItems: [
             {
                 title: 'Plans & Pricing',

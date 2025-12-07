@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import {NAV_ITEMS} from "../../../assets/data/navItems.ts";
 import {Dropdown} from "../Dropdown.tsx";
+import {Link} from "react-router-dom";
 
 export const DesktopMenu = () => {
     const [openDropdown, setOpenDropdown] = useState<number>(0);
@@ -9,7 +10,7 @@ export const DesktopMenu = () => {
     return (
         <ul className="hidden lg:flex items-center gap-1 text-sm font-medium">
             {NAV_ITEMS.map((item) => (
-                <li key={item.id} className="relative group">
+                <Link to={item.link} key={item.id} className="relative group">
                     <button
                         className="flex items-center gap-1 px-4 py-2 rounded-md hover:text-secondary hover:bg-gray-800 transition-colors text-xs xl:text-md"
                         onMouseEnter={() => setOpenDropdown(item.id)}
@@ -32,7 +33,7 @@ export const DesktopMenu = () => {
                             </div>
                         </div>
                     )}
-                </li>
+                </Link>
             ))}
         </ul>
     );

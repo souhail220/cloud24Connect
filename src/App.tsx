@@ -3,6 +3,7 @@ import "./App.css";
 import HomeLayout from "./pages/homePage/pageLayout/homeLayout";
 import {Login} from "./pages/signUpPage/Login.tsx";
 import {SignUp} from "./pages/signUpPage/SignUp.tsx";
+import {Pricing} from "./pages/pricingPage/Pricing.tsx";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
               <Route path="/" element={<HomeLayout />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<SignUp />} />
+              <Route path="/pricing" element={<Pricing />} />
           </Routes>
       </BrowserRouter>
   );

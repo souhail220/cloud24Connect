@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from 'react-router-dom';
-import logo from "../../assets/images/cloud24Logo-wordless.png";
+import logo from "../../assets/images/cloud24Logo-white.png";
 import { Menu, X } from "lucide-react";
 import {DesktopMenu} from "./menus/DesktopMenu.tsx";
 import {MobileMenu} from "./menus/MobileMenu.tsx";
@@ -16,10 +16,9 @@ export const Navbar = () => {
             <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
 
                 {/* Logo */}
-                <div className="flex items-center gap-2">
-                    <img src={logo} alt="Cloud24Connect Logo" className="h-8 w-8" />
-                    <span className="font-semibold text-lg text-secondary">Cloud24Connect</span>
-                </div>
+                <Link to="/" className="flex items-center gap-2">
+                    <img src={logo} alt="Cloud24Connect Logo" className="h-12 w-18" />
+                </Link>
 
                 {/* Desktop Navigation */}
                 <DesktopMenu />
