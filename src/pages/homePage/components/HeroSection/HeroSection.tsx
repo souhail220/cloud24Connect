@@ -1,10 +1,13 @@
 import { ArrowRight, Sparkles } from 'lucide-react';
 import "./HeroSection.css";
+import {useScrollAnimation} from "../../../../hooks/useScrollAnimation.ts";
 
 export default function HeroSection() {
+    const { ref, isVisible } = useScrollAnimation(0.1);
+
     return (
         <section className="hero-section bg-gradient-to-br from-primary-dark via-primary to-primary-dark">
-            <div className="max-w-7xl mx-auto">
+            <div ref={ref} className={`max-w-7xl mx-auto transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'} `}>
                 <div className="hero-section-container">
                     <div className="badge-container bg-cyan-500/20 border border-cyan-400/50">
                         <Sparkles className="w-4 h-4 text-secondary-light" />

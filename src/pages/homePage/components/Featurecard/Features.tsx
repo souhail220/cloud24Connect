@@ -1,13 +1,7 @@
-import {
-    Zap,
-    ShieldCheck,
-    Video,
-    Cloud,
-    Network,
-    Database,
-} from "lucide-react";
+import {Zap, ShieldCheck, Video, Cloud, Network, Database} from "lucide-react";
 import FeatureCard from "./featurecard.tsx";
 import "./featureCard.css"
+import {useScrollAnimation} from "../../../../hooks/useScrollAnimation.ts";
 
 const features = [
     {
@@ -59,9 +53,10 @@ const features = [
 ];
 
 export const Features = () => {
+    const { ref, isVisible } = useScrollAnimation(0.1);
     return (
         <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-primary to-primary-dark">
-            <div className="text-center px-6">
+            <div ref={ref} className={`text-center px-6 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
                 <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-secondary-dark to-secondary-light bg-clip-text text-transparent">
                     Our Service Benefits
                 </h2>

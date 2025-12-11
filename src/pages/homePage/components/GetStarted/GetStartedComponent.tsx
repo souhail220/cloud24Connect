@@ -5,6 +5,7 @@ import grokLogo from '../../../../assets/images/grok.png';
 import appleLogo from '../../../../assets/images/apple.png';
 import teamCherryLogo from '../../../../assets/images/teamCherry.png';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import {useScrollAnimation} from "../../../../hooks/useScrollAnimation.ts";
 
 const benefits = [
     '14-day free trial',
@@ -15,13 +16,13 @@ const benefits = [
 
 
 export const GetStartedComponent = () => {
+    const { ref, isVisible } = useScrollAnimation(0.1);
     return (
         <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary-dark via-primary to-primary-dark overflow-hidden">
-            {/*<div className="absolute inset-0 bg-grid-pattern opacity-5"></div>*/}
-            {/*<div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500 rounded-full blur-3xl opacity-20 animate-pulse-slow"></div>*/}
-            {/*<div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full blur-3xl opacity-20 animate-pulse-slow animation-delay-1000"></div>*/}
 
-            <div className="max-w-4xl mx-auto text-center relative z-10 transform transition-all duration-1000">
+            <div ref={ref} className={`max-w-4xl mx-auto text-center relative z-10 transform transition-all duration-1000 
+            ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}
+            >
                 <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
                     Ready to Transform Your Business?
                 </h2>
