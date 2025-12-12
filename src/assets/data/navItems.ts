@@ -195,25 +195,31 @@ export const NAV_ITEMS: NavItem[] = [
                 title: 'Plans & Pricing',
                 description: 'Choose the right plan for you',
                 icon: '💳',
-                link: '/pricing/plans'
+                link: 'plans'
             },
             {
                 title: 'Free Trial',
                 description: 'Try free for 14 days',
                 icon: '🎁',
-                link: '/pricing/trial'
+                link: 'trial'
+            },
+            {
+                title: 'Pricing Calculator',
+                description: 'Estimate better. Build smarter. Decide faster',
+                icon: '🧮',
+                link: 'calculator'
             },
             {
                 title: 'Compare Plans',
                 description: 'See all features side-by-side',
                 icon: '⚖️',
-                link: '/pricing/compare'
+                link: 'comparison'
             },
             {
                 title: 'Volume Discounts',
                 description: 'Save with higher usage',
                 icon: '📦',
-                link: '/pricing/discounts'
+                link: 'discounts'
             }
         ]
     }

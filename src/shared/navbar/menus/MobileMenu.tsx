@@ -3,7 +3,10 @@ import { ChevronDown } from "lucide-react";
 import { NAV_ITEMS } from "../../../assets/data/navItems.ts";
 import { Dropdown } from "../Dropdown";
 
-export const MobileMenu = ({ isOpen }: { isOpen: boolean }) => {
+export const MobileMenu = ({isOpen, onLinkClick}: {
+    isOpen: boolean,
+    onLinkClick?: ((section: string) => void) | undefined
+}) => {
     const [openDropdown, setOpenDropdown] = useState<number>(0);
 
     if (!isOpen) return null;
@@ -23,7 +26,7 @@ export const MobileMenu = ({ isOpen }: { isOpen: boolean }) => {
 
                             {openDropdown === item.id && (
                                 <div className="w-full mt-2 ml-4 border-l border-cyan-500/50 pl-3 animate-in fade-in slide-in-from-top-1 duration-200">
-                                    <Dropdown items={item.dropdownItems} />
+                                    <Dropdown onLinkClick={onLinkClick} items={item.dropdownItems} />
                                 </div>
                             )}
                         </li>

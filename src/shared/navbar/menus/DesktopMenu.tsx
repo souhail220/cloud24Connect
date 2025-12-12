@@ -1,10 +1,14 @@
-import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import {useState} from "react";
+import {ChevronDown} from "lucide-react";
 import {NAV_ITEMS} from "../../../assets/data/navItems.ts";
 import {Dropdown} from "../Dropdown.tsx";
 import {Link} from "react-router-dom";
 
-export const DesktopMenu = () => {
+interface DesktopMenuProps {
+    onLinkClick?: ((section: string) => void) | undefined
+}
+
+export const DesktopMenu = ({onLinkClick}: DesktopMenuProps) => {
     const [openDropdown, setOpenDropdown] = useState<number>(0);
 
     return (
@@ -28,8 +32,9 @@ export const DesktopMenu = () => {
                         <div
                             onMouseLeave={() => setOpenDropdown(0)}
                             className="absolute top-full -left-10 pt-2">
-                            <div className="min-w-[250px] bg-blue-950/95 border border-secondary-light rounded-lg shadow-xl">
-                                <Dropdown items={item.dropdownItems} />
+                            <div
+                                className="min-w-[250px] bg-blue-950/95 border border-secondary-light rounded-lg shadow-xl">
+                                <Dropdown onLinkClick={onLinkClick} items={item.dropdownItems}/>
                             </div>
                         </div>
                     )}

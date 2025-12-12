@@ -1,10 +1,11 @@
 import type {DropdownItem} from "../../assets/data/navItems.ts";
 
 interface Dropdown {
-    items?: DropdownItem[];
+    items?: DropdownItem[],
+    onLinkClick?: ((section: string) => void) | undefined
 }
 
-export const Dropdown = ({ items = [] }: Dropdown) => {
+export const Dropdown = ({items = [], onLinkClick}: Dropdown) => {
     if (!items.length) {
         return (
             <div className="py-4 px-4 text-sm text-gray-500">
@@ -16,9 +17,9 @@ export const Dropdown = ({ items = [] }: Dropdown) => {
     return (
         <div className="py-2">
             {items.map((item, index) => (
-                <a
+                <div
                     key={index}
-                    href={item.link}
+                    onClick={() => onLinkClick ? onLinkClick(item.link) : "/"}
                     className="flex items-start gap-3 px-4 py-3 hover:bg-primary transition-colors group"
                 >
                     {item.icon && (
@@ -32,7 +33,7 @@ export const Dropdown = ({ items = [] }: Dropdown) => {
                             {item.description}
                         </p>
                     </div>
-                </a>
+                </div>
             ))}
         </div>
     );
