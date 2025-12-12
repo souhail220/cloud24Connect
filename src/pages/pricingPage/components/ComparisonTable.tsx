@@ -8,7 +8,7 @@ export const ComparisonTable = () => {
            <div ref={ref} className={`transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
                {/*Page's title*/}
                <div className="text-center mb-12">
-                   <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+                   <h2 className="text-3xl sm:text-4xl font-bold text-secondary-dark mb-4">
                        Compare All Plans
                    </h2>
                    <p className="text-gray-300 text-lg">

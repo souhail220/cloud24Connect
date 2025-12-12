@@ -7,7 +7,7 @@ export const FAQSection = () => {
             <div ref={ref} className={`text-center bg-slate-800/50 border border-gray-600 rounded-2xl p-12 backdrop-blur-sm
             transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}
             `}>
-                <h3 className="text-2xl font-bold text-white mb-4">Have questions?</h3>
+                <h3 className="text-2xl font-bold text-secondary-dark mb-4">Have questions?</h3>
                 <p className="text-gray-300 mb-8">
                     Check our FAQ or contact our sales team for more information about custom plans.
                 </p>

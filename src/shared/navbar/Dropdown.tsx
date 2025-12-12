@@ -28,7 +28,7 @@ export const Dropdown = ({ items = [] }: Dropdown) => {
                         <p className="font-semibold text-sm text-start text-secondary group-hover:text-secondary-light transition-colors">
                             {item.title}
                         </p>
-                        <p className="text-xs text-white mt-0.5">
+                        <p className="text-xs text-start text-white mt-0.5">
                             {item.description}
                         </p>
                     </div>
