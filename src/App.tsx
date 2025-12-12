@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import "./App.css";
 import HomeLayout from "./pages/homePage/pageLayout/homeLayout";
 import {SignUpLayout} from "./pages/signUpPage/SignUpLayout.tsx";
-import {Pricing} from "./pages/pricingPage/Pricing.tsx";
+import {PricingLayout} from "./pages/pricingPage/PricingLayout.tsx";
 import {LoginPageLayout} from "./pages/signUpPage/LoginPageLayout.tsx";
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
               <Route path="/" element={<HomeLayout />} />
               <Route path="/login" element={<LoginPageLayout />} />
               <Route path="/signup" element={<SignUpLayout />} />
-              <Route path="/pricing" element={<Pricing />} />
+              <Route path="/pricing" element={<PricingLayout />} />
           </Routes>
       </BrowserRouter>
   );
