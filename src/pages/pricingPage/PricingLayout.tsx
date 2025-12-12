@@ -25,7 +25,6 @@ export const PricingLayout = () => {
           <ComparisonTable />
           <FAQSection />
       </main>
-
       <Footer />
     </div>
   );

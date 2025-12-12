@@ -1,29 +1,7 @@
 import { useState } from 'react';
 import { Plus, Trash2, ChevronDown } from 'lucide-react';
-
-interface ServiceOption {
-  id: string;
-  label: string;
-  price: number;
-}
-
-interface Service {
-  id: string;
-  name: string;
-  icon: string;
-  basePrice: number;
-  options: ServiceOption[];
-  description: string;
-}
-
-interface SelectedService {
-  id: string;
-  serviceId: string;
-  serviceName: string;
-  selectedOptionId: string;
-  selectedOptionLabel: string;
-  price: number;
-}
+import type {SelectedService, Service} from "../data/ServicesType.ts";
+import {useScrollAnimation} from "../../../hooks/useScrollAnimation.ts";
 
 const AVAILABLE_SERVICES: Service[] = [
   {
@@ -101,6 +79,7 @@ const AVAILABLE_SERVICES: Service[] = [
 ];
 
 export const PricingCalculator = () => {
+    const { ref, isVisible } = useScrollAnimation(0.1);
   const [selectedServices, setSelectedServices] = useState<SelectedService[]>([]);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
@@ -160,7 +139,7 @@ export const PricingCalculator = () => {
 
   return (
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
-          <div className="space-y-8">
+          <div ref={ref} className={`space-y-8 transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
               {/* Calculator Header */}
               <div className="text-center mb-12">
                   <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">

@@ -1,5 +1,6 @@
 import type {Plan, PlanType} from "../../data/Plan.ts";
 import {PlanCard} from "./PlanCard.tsx";
+import {useScrollAnimation} from "../../../../hooks/useScrollAnimation.ts";
 
 const plans: Plan[] = [
     {
@@ -63,26 +64,29 @@ interface PlansSectionProps {
 }
 
 export const PlanSection = ({selectedPlan, onSelect}: PlansSectionProps) => {
+    const { ref, isVisible } = useScrollAnimation(0.1);
 
     return (
         <section className="flex flex-col gap-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
-            <div className="text-center max-w-3xl mx-auto">
-                <h1 className="text-4xl sm:text-5xl font-bold text-secondary mb-6">
-                    Simple, Transparent Pricing
-                </h1>
-                <p className="text-xl text-gray-300">
-                    Choose the perfect plan for your infrastructure needs. Scale up as you grow.
-                </p>
-            </div>
-            <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-6">
-                {plans.map((plan) => (
-                    <PlanCard
-                        key={plan.id}
-                        plan={plan}
-                        isActive={selectedPlan === plan.id}
-                        onSelect={() => onSelect(plan.id)}
-                    />
-                ))}
+            <div ref={ref} className={`transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
+                <div className="text-center max-w-3xl mx-auto">
+                    <h1 className="text-4xl sm:text-5xl font-bold text-secondary mb-6">
+                        Simple, Transparent Pricing
+                    </h1>
+                    <p className="text-xl text-gray-300">
+                        Choose the perfect plan for your infrastructure needs. Scale up as you grow.
+                    </p>
+                </div>
+                <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-6">
+                    {plans.map((plan) => (
+                        <PlanCard
+                            key={plan.id}
+                            plan={plan}
+                            isActive={selectedPlan === plan.id}
+                            onSelect={() => onSelect(plan.id)}
+                        />
+                    ))}
+                </div>
             </div>
         </section>
     )
