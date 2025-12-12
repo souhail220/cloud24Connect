@@ -4,6 +4,7 @@ import HomeLayout from "./pages/homePage/pageLayout/homeLayout";
 import {SignUpLayout} from "./pages/signUpPage/SignUpLayout.tsx";
 import {PricingLayout} from "./pages/pricingPage/PricingLayout.tsx";
 import {LoginPageLayout} from "./pages/signUpPage/LoginPageLayout.tsx";
+import {ProductDashboard} from "./pages/ProductDashboard/ProductDashboardLayout.tsx";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
               <Route path="/login" element={<LoginPageLayout />} />
               <Route path="/signup" element={<SignUpLayout />} />
               <Route path="/pricing" element={<PricingLayout />} />
+              <Route path="/products/dashboard" element={<ProductDashboard />} />
           </Routes>
       </BrowserRouter>
   );
