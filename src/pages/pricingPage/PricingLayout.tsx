@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import {Navbar} from "../../shared/navbar/navbar.tsx";
 import Footer from "../../shared/footer/footer.tsx";
-import {PricingCalculator} from "./components/PricingCalculator.tsx";
+import {PricingCalculator} from "./components/PricingCalculator/PricingCalculator.tsx";
 import type {PlanType} from "./data/Plan.ts";
 import {FAQSection} from "./components/FAQSection.tsx";
 import {ComparisonTable} from "./components/ComparisonTable.tsx";
