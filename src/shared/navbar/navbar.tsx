@@ -31,11 +31,11 @@ export const Navbar = ({onLinkClick}: NavbarProps) => {
                 {/* Desktop Actions */}
                 <div className="flex items-center gap-3">
                     <Link to="/login"
-                          className="text-sm border border-transparent hover:border-secondary-light rounded-md px-4 py-2 transition-colors">
+                          className="text-sm border border-transparent text-white hover:text-gray-300 hover:border-secondary-light rounded-md px-4 py-2 transition-colors">
                         Sign In
                     </Link>
                     <Link to="/signup"
-                          className="bg-secondary-dark hover:bg-secondary text-white text-sm px-4 py-2 rounded-md transition-colors shadow-md">
+                          className="bg-secondary-dark hover:bg-secondary text-white hover:text-gray-200 text-sm px-4 py-2 rounded-md transition-colors shadow-md">
                         Sign Up
                     </Link>
                 </div>

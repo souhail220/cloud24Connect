@@ -1,4 +1,5 @@
 import {useScrollAnimation} from "../../../hooks/useScrollAnimation.ts";
+import {Link} from "react-router-dom";
 
 export const FreeTrialCTA = () => {
     const { ref, isVisible } = useScrollAnimation(0.1);
@@ -15,9 +16,9 @@ export const FreeTrialCTA = () => {
                 <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
                     Start with a 14-day free trial. No credit card required. Full access to all Pro features.
                 </p>
-                <button className="bg-gradient-to-r from-secondary-light to-secondary hover:from-secondary hover:to-secondary-dark text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 inline-block">
+                <Link to={"/login"} className="bg-gradient-to-r from-secondary-light to-secondary hover:from-secondary hover:to-secondary-dark text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 inline-block">
                     Claim Your Free Trial
-                </button>
+                </Link>
             </div>
         </section>
     )

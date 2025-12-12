@@ -1,8 +1,10 @@
-import { useState } from 'react';
+import {type ChangeEvent, type FormEvent, useState} from 'react';
 import { Link } from 'react-router-dom';
 import { Eye, EyeOff, Chrome, Github, Check } from 'lucide-react';
+import {useNavigate} from "react-router";
 
 export const SignUpForm = () => {
+    const navigate = useNavigate();
 
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
@@ -23,7 +25,7 @@ export const SignUpForm = () => {
         { label: 'Passwords match', met: formData.password && formData.password === formData.confirmPassword },
     ];
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         const { name, value, checked, type } = e.target;
         setFormData(prev => ({
             ...prev,
@@ -34,7 +36,7 @@ export const SignUpForm = () => {
         }
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = (e: FormEvent) => {
         e.preventDefault();
         const newErrors: Record<string, string> = {};
 
@@ -72,17 +74,19 @@ export const SignUpForm = () => {
 
         if (Object.keys(newErrors).length === 0) {
             console.log('Sign up attempt:', formData);
+            navigate('/products/dashboard');
         }
     };
 
     return(
-        <div>
+        <div className="min-h-screen max-w-2xl w-full p-4">
             <div className="mb-8">
                 <h1 className="text-3xl font-bold text-white mb-2">Create Account</h1>
                 <p className="text-gray-400">Join Cloud24Connect today and transform your infrastructure</p>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                 <div>
                     <label htmlFor="fullName" className="block text-sm font-medium text-secondary text-start mb-2">
                         Full Name
@@ -209,28 +213,28 @@ export const SignUpForm = () => {
                         ))}
                     </div>
                 )}
+                </div>
 
-                <label className="flex items-start gap-2">
-                    <input
-                        name="agreeToTerms"
-                        type="checkbox"
-                        checked={formData.agreeToTerms}
-                        onChange={handleChange}
-                        className="w-4 h-4 bg-slate-700 border border-gray-600 rounded cursor-pointer accent-cyan-500 mt-1 flex-shrink-0"
-                    />
-                    <span className="text-sm text-gray-400">I agree to the{' '}
-                        <a href="#" className="text-secondary hover:text-secondary-light">
-                                        Terms of Service
-                                    </a>
-                        {' '}and{' '}
-                        <a href="#" className="text-secondary hover:text-secondary-light">
-                                        Privacy Policy
-                                    </a>
-                                </span>
-                </label>
-                {errors.agreeToTerms && (
-                    <p className="text-sm text-red-400">{errors.agreeToTerms}</p>
-                )}
+                <div>
+                    <label className="flex items-start gap-2">
+                        <input
+                            name="agreeToTerms"
+                            type="checkbox"
+                            checked={formData.agreeToTerms}
+                            onChange={handleChange}
+                            className="w-4 h-4 bg-slate-700 border border-gray-600 rounded cursor-pointer accent-cyan-500 mt-1 flex-shrink-0"
+                        />
+                        <span className="text-sm text-gray-400">
+                                I agree to the{' '}
+                            <a href="#" className="text-secondary hover:text-secondary hover:underline">Terms of Service</a>
+                            {' '}and{' '}
+                            <a href="#" className="text-secondary hover:text-secondary hover:underline">Privacy Policy</a>
+                            </span>
+                    </label>
+                    {errors.agreeToTerms && (
+                        <p className="mt-1 text-sm text-red-400">{errors.agreeToTerms}</p>
+                    )}
+                </div>
 
                 <button
                     type="submit"
@@ -271,7 +275,7 @@ export const SignUpForm = () => {
                 Already have an account?{' '}
                 <Link
                     to="/login"
-                    className="text-secondary hover:text-secondary-light font-medium transition-colors"
+                    className="text-secondary hover:text-secondary-light hover:underline font-medium transition-colors"
                 >
                     Sign in
                 </Link>

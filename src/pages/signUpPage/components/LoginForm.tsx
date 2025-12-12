@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {Chrome, Eye, EyeOff, Github} from 'lucide-react';
+import {useNavigate} from "react-router";
 
 export const LoginForm = () => {
+    const navigate = useNavigate();
     const [showPassword, setShowPassword] = useState(false);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -28,6 +30,7 @@ export const LoginForm = () => {
 
         if (Object.keys(newErrors).length === 0) {
             console.log('Login attempt:', { email, password });
+            navigate('/products/dashboard');
         }
     };
 

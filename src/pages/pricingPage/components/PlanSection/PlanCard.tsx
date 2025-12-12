@@ -1,4 +1,5 @@
 import type {Plan} from "../../data/Plan.ts";
+import {Zap} from "lucide-react";
 
 interface PlanCardProps {
     plan: Plan,
@@ -11,11 +12,17 @@ export const PlanCard = ({plan, isActive, onSelect}: PlanCardProps) => {
         <div
             onClick={onSelect}
             className={`
-                cursor-pointer rounded-2xl p-8 border transition-all duration-300
+                cursor-pointer rounded-2xl mt-4 p-8 border transition-all duration-300
                 bg-slate-800/60 backdrop-blur
                 ${isActive ? 'border-secondary-light shadow-xl scale-[1.03]' : 'border-gray-700 hover:border-secondary-dark'}
             `}
         >
+            {plan.highlight && (
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-secondary to-secondary-dark text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center gap-2">
+                    <Zap className="w-4 h-4" />
+                    Most Popular
+                </div>
+            )}
             <h3 className="text-2xl font-bold text-white mb-2">
                 {plan.name}
             </h3>
@@ -40,7 +47,7 @@ export const PlanCard = ({plan, isActive, onSelect}: PlanCardProps) => {
                 className={`w-full mt-8 py-3 rounded-lg font-medium transition-all
                     ${isActive
                     ? 'bg-secondary text-white hover:bg-secondary-light'
-                    : 'bg-slate-700/60 text-gray-200 hover:bg-slate-600'}
+                    : 'bg-slate-700/60 text-gray-200 hover:bg-slate-600 hover:border-secondary'}
                 `}
             >
                 {isActive ? 'Selected' : 'Choose Plan'}

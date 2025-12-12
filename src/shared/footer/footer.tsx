@@ -19,7 +19,7 @@ const Footer = () => {
             <div className="logo-container">
               <img className="logo-icon" src={logo} alt="Cloud2Connect Logo"/>
               <div className="logo-text">
-                <h2>Cloud24Connect</h2>
+                <h2 className="text-secondary bold">Cloud24Connect</h2>
                 <p>PERFORMANCE CLOUD</p>
               </div>
             </div>

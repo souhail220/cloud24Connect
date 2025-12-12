@@ -10,7 +10,7 @@ export const SignUpLayout = () => {
         <div className="min-h-screen mt-16 bg-gradient-to-br from-primary-dark via-primary to-primary-dark flex flex-col">
             <Navbar />
             <div className="flex-1 flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12">
-                <div className="w-full max-w-md">
+                <div className="w-full xl:max-w-3xl lg:max-w-xl max-w-md">
                     <div
                         ref={ref}
                         className={`bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 shadow-2xl border border-cyan-500/20
