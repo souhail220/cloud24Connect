@@ -1,6 +1,6 @@
 import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import { Plus, ChevronDown } from 'lucide-react';
-import type {SelectedService, Service} from "../../data/ServicesType.ts";
+import type {SelectedOptions, SelectedService, Service} from "../../data/ServicesType.ts";
 import {useScrollAnimation} from "../../../../hooks/useScrollAnimation.ts";
 import {ServiceCard} from "./ServiceCard.tsx";
 import {PricingSummary} from "./PricingSummary.tsx";
@@ -44,14 +44,25 @@ export const PricingCalculator = () => {
         const service = AVAILABLE_SERVICES.find((s) => s.id === serviceId);
         if (!service) return;
 
-        const defaultOption = service.options[0];
+        const initialSelectedOptions: SelectedOptions = {};
+        service.options.forEach(option => {
+            initialSelectedOptions[option.id] = option.subOptions[0]?.id || "";
+        });
+
+        const initialPrice =
+            service.basePrice +
+            service.options.reduce((sum, option) => {
+                const defaultSub = option.subOptions[0];
+                return sum + (defaultSub ? defaultSub.price : 0);
+            }, 0);
+
         const newService: SelectedService = {
             id: `${serviceId}-${Date.now()}`,
             serviceId: service.id,
             serviceName: service.name,
-            selectedOptionId: defaultOption.id,
-            selectedOptionLabel: defaultOption.label,
-            price: defaultOption.price,
+            options: service.options,
+            selectedOptions: initialSelectedOptions,
+            price: initialPrice,
         };
 
         setSelectedServices((prev) => [...prev, newService]);
@@ -62,26 +73,33 @@ export const PricingCalculator = () => {
         setSelectedServices((prev) => prev.filter((s) => s.id !== id));
     }, []);
 
-    const updateServiceOption = useCallback((id: string, optionId: string) => {
-        setSelectedServices((prev) =>
-            prev.map((service) => {
-                if (service.id === id) {
-                    const serviceConfig = AVAILABLE_SERVICES.find(
-                        (s) => s.id === service.serviceId
-                    );
-                    const option = serviceConfig?.options.find((o) => o.id === optionId);
-                    if (option) {
-                        return {
-                            ...service,
-                            selectedOptionId: optionId,
-                            selectedOptionLabel: option.label,
-                            price: option.price,
-                        };
-                    }
-                }
-                return service;
-            })
-        );
+    const updateServiceOption = useCallback((serviceId: string, optionId: string, subOptionId: string) => {
+        setSelectedServices(prev => prev.map(service => {
+            if (service.id !== serviceId) return service;
+
+            const serviceConfig = AVAILABLE_SERVICES.find(s => s.id === service.serviceId);
+            if (!serviceConfig) return service;
+
+            // Update selected sub-option for this option group
+                const updatedSelectedOptions = {
+                    ...service.selectedOptions,
+                    [optionId]: subOptionId,
+                };
+
+                // Recalculate the total price of the service
+                const newPrice = serviceConfig.options.reduce((sum, option) => {
+                    const selectedSubId = updatedSelectedOptions[option.id];
+                    const sub = option.subOptions.find(s => s.id === selectedSubId);
+
+                    return sum + (sub ? sub.price : 0);
+                    }, serviceConfig.basePrice);
+
+                return {
+                    ...service,
+                    selectedOptions: updatedSelectedOptions,
+                    price: newPrice,
+                };
+        }));
         }, []
     );
 
@@ -112,7 +130,7 @@ export const PricingCalculator = () => {
           <div ref={ref} className={`space-y-8 transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
               {/* Calculator Header */}
               <div className="text-center mb-12">
-                  <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+                  <h2 className="text-3xl sm:text-4xl font-bold text-secondary-dark mb-4">
                       Custom Pricing Calculator
                   </h2>
                   <p className="text-gray-300 text-lg">

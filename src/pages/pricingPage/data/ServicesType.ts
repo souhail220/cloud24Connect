@@ -1,7 +1,13 @@
-export interface ServiceOption {
+export interface SubOption {
     id: string;
     label: string;
     price: number;
+}
+
+export interface ServiceOption {
+    id: string;
+    label: string;
+    subOptions: SubOption[];
 }
 
 export interface Service {
@@ -13,11 +19,15 @@ export interface Service {
     description: string;
 }
 
+export interface SelectedOptions {
+    [optionId: string]: string;
+}
+
 export interface SelectedService {
     id: string;
     serviceId: string;
     serviceName: string;
-    selectedOptionId: string;
-    selectedOptionLabel: string;
+    options: ServiceOption[];
+    selectedOptions: SelectedOptions;
     price: number;
 }

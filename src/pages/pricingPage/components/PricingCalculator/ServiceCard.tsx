@@ -5,7 +5,7 @@ interface ServiceCardProps {
     service: SelectedService,
     serviceConfig: Service | undefined,
     onRemove: (id: string) => void,
-    onUpdateOption: (id: string, optionId: string) => void
+    onUpdateOption: (serviceId: string, optionId: string, subOptionId: string) => void
 }
 
 export const ServiceCard = ({service, serviceConfig, onRemove, onUpdateOption}: ServiceCardProps) => {
@@ -23,27 +23,42 @@ export const ServiceCard = ({service, serviceConfig, onRemove, onUpdateOption}: 
                         </div>
                     </div>
 
-                    <div className="flex items-center gap-3">
-                        <label className="text-gray-400 text-sm" htmlFor={`option-${service.id}`}>
-                            Option:
-                        </label>
-                        <select
-                            id={`option-${service.id}`}
-                            value={service.selectedOptionId}
-                            onChange={(e) => onUpdateOption(service.id, e.target.value)}
-                            className="bg-slate-700 border border-gray-600 text-white rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all"
-                        >
-                            {serviceConfig?.options.map((option) => (
-                                <option key={option.id} value={option.id}>
-                                    {option.label} - ${option.price}/mo
-                                </option>
-                            ))}
-                        </select>
+                    <div className="flex items-center justify-start flex-wrap gap-5">
+                        {service.options.map(option => {
+                            const selectedSubOptionId = service.selectedOptions?.[option.id] || "";
+
+                            return (
+                                <div key={option.id} className="flex items-center gap-2">
+                                    <label
+                                        className="text-gray-400 text-sm"
+                                        htmlFor={`option-${service.id}-${option.id}`}
+                                    >
+                                        {option.label}:
+                                    </label>
+
+                                    <select
+                                        id={`option-${service.id}-${option.id}`}
+                                        value={selectedSubOptionId}
+                                        onChange={(e) =>
+                                            onUpdateOption(service.id, option.id, e.target.value)
+                                        }
+                                        className="bg-slate-700 border border-gray-600 text-white rounded-lg p-2 text-sm focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent transition-all"
+                                    >
+                                        <option value="" disabled>Select an option</option>
+                                        {option.subOptions.map((subOption) => (
+                                            <option key={subOption.id} value={subOption.id}>
+                                                {subOption.label} - ${subOption.price}/mo
+                                            </option>
+                                        ))}
+                                    </select>
+                                </div>
+                            );
+                        })}
                     </div>
                 </div>
 
                 <div className="text-right flex flex-col items-end gap-3">
-                    <p className="text-2xl font-bold text-cyan-400">
+                    <p className="text-2xl font-bold text-secondary-lightc">
                         ${service.price}
                     </p>
                     <button
