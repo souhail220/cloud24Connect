@@ -1,21 +1,28 @@
 import { BrowserRouter, Routes, Route } from "react-router";
+import { lazy, Suspense } from "react";
 import "./App.css";
-import HomeLayout from "./pages/homePage/pageLayout/homeLayout";
-import {SignUpLayout} from "./pages/signUpPage/SignUpLayout.tsx";
-import {PricingLayout} from "./pages/pricingPage/PricingLayout.tsx";
-import {LoginPageLayout} from "./pages/signUpPage/LoginPageLayout.tsx";
-import {ProductDashboard} from "./pages/ProductDashboard/ProductDashboardLayout.tsx";
+import ErrorBoundary from "./shared/ErrorBoundary/ErrorBoundary.tsx";
+
+const HomeLayout = lazy(() => import("./pages/homePage/pageLayout/homeLayout"));
+const SignUpLayout = lazy(() => import("./pages/signUpPage/SignUpLayout.tsx"));
+const PricingLayout = lazy(() => import("./pages/pricingPage/PricingLayout.tsx"));
+const LoginPageLayout = lazy(() => import("./pages/signUpPage/LoginPageLayout.tsx"));
+const ProductDashboard = lazy(() => import("./pages/ProductDashboard/ProductDashboardLayout.tsx"));
 
 function App() {
   return (
       <BrowserRouter>
-          <Routes>
-              <Route path="/" element={<HomeLayout />} />
-              <Route path="/login" element={<LoginPageLayout />} />
-              <Route path="/signup" element={<SignUpLayout />} />
-              <Route path="/pricing" element={<PricingLayout />} />
-              <Route path="/products/dashboard" element={<ProductDashboard />} />
-          </Routes>
+      <Suspense fallback={<div className="flex items-center justify-center min-h-screen text-white">Loading...</div>}>
+          <ErrorBoundary>
+              <Routes>
+                  <Route path="/" element={<HomeLayout />} />
+                  <Route path="/login" element={<LoginPageLayout />} />
+                  <Route path="/signup" element={<SignUpLayout />} />
+                  <Route path="/pricing" element={<PricingLayout />} />
+                  <Route path="/products/dashboard" element={<ProductDashboard />} />
+              </Routes>
+          </ErrorBoundary>
+      </Suspense>
       </BrowserRouter>
   );
 }

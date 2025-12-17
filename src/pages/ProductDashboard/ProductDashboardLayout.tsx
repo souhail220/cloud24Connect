@@ -219,7 +219,7 @@ const PRODUCTS: Product[] = [
 
 
 
-export const ProductDashboard = () => {
+const ProductDashboard = () => {
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
     const [selectedSubCategory, setSelectedSubCategory] = useState<string | null>(null);
@@ -324,3 +324,4 @@ export const ProductDashboard = () => {
 
     );
 };
+export default ProductDashboard;

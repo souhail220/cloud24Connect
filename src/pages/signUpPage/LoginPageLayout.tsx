@@ -3,7 +3,7 @@ import Footer from "../../shared/footer/footer";
 import {LoginForm} from "./components/LoginForm.tsx";
 import {useScrollAnimation} from "../../hooks/useScrollAnimation.ts";
 
-export const LoginPageLayout = () => {
+const LoginPageLayout = () => {
     const {ref, isVisible} = useScrollAnimation(0.1);
 
     return (
@@ -24,3 +24,4 @@ export const LoginPageLayout = () => {
         </div>
     );
 };
+export default LoginPageLayout;

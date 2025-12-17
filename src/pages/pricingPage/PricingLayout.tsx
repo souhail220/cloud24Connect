@@ -9,7 +9,7 @@ import {VolumeDiscountSection} from "./components/VolumeDiscountSection.tsx";
 import {FreeTrialCTA} from "./components/FreeTrialCTA.tsx";
 import {PlanSection} from "./components/PlanSection/PlanSection.tsx";
 
-export const PricingLayout = () => {
+const PricingLayout = () => {
 
     // Refs for each section
     const planRef = useRef<HTMLDivElement>(null);
@@ -77,3 +77,4 @@ export const PricingLayout = () => {
     </div>
   );
 };
+export default PricingLayout;

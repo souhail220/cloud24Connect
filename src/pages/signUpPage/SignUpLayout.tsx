@@ -3,7 +3,7 @@ import {Navbar} from "../../shared/navbar/navbar.tsx";
 import {SignUpForm} from "./components/SignUpForm.tsx";
 import {useScrollAnimation} from "../../hooks/useScrollAnimation.ts";
 
-export const SignUpLayout = () => {
+const SignUpLayout = () => {
     const {ref, isVisible} = useScrollAnimation(0.1);
 
     return (
@@ -24,3 +24,4 @@ export const SignUpLayout = () => {
         </div>
     );
 };
+export default SignUpLayout;
