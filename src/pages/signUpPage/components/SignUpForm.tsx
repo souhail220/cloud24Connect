@@ -21,7 +21,7 @@ export const SignUpForm = () => {
         { label: 'At least 8 characters', met: formData.password.length >= 8 },
         { label: 'Contains uppercase letter', met: /[A-Z]/.test(formData.password) },
         { label: 'Contains lowercase letter', met: /[a-z]/.test(formData.password) },
-        { label: 'Contains number', met: /[0-9]/.test(formData.password) },
+        { label: 'Contains number', met: /\d/.test(formData.password) },
         { label: 'Passwords match', met: formData.password && formData.password === formData.confirmPassword },
     ];
 
@@ -52,13 +52,13 @@ export const SignUpForm = () => {
 
         if (!formData.password) {
             newErrors.password = 'Password is required';
-        } else if (formData.password.length < 8) {
+        } else if ((formData.password || '').length < 8) {
             newErrors.password = 'Password must be at least 8 characters';
         } else if (!/[A-Z]/.test(formData.password)) {
             newErrors.password = 'Password must contain an uppercase letter';
         } else if (!/[a-z]/.test(formData.password)) {
             newErrors.password = 'Password must contain a lowercase letter';
-        } else if (!/[0-9]/.test(formData.password)) {
+        } else if (!/\d/.test(formData.password)) {
             newErrors.password = 'Password must contain a number';
         }
 
@@ -195,8 +195,8 @@ export const SignUpForm = () => {
 
                 {formData.password && (
                     <div className="bg-slate-700/30 rounded-lg p-4 space-y-2">
-                        {passwordRequirements.map((req, index) => (
-                            <div key={index} className="flex items-center gap-2">
+                        {passwordRequirements.map((req) => (
+                            <div key={req.label} className="flex items-center gap-2">
                                 <Check
                                     className={`w-4 h-4 ${
                                         req.met ? 'text-green-400' : 'text-gray-500'
@@ -226,9 +226,9 @@ export const SignUpForm = () => {
                         />
                         <span className="text-sm text-gray-400">
                                 I agree to the{' '}
-                            <a href="#" className="text-secondary hover:text-secondary hover:underline">Terms of Service</a>
+                            <a href="/" className="text-secondary hover:text-secondary hover:underline">Terms of Service</a>
                             {' '}and{' '}
-                            <a href="#" className="text-secondary hover:text-secondary hover:underline">Privacy Policy</a>
+                            <a href="/" className="text-secondary hover:text-secondary hover:underline">Privacy Policy</a>
                             </span>
                     </label>
                     {errors.agreeToTerms && (

@@ -13,14 +13,15 @@ interface Product {
 
 interface ProductCardProps {
     product: Product,
-    key?: string
+    key: string
 }
 
-export const ProductCard = ({product}: ProductCardProps) => {
+export const ProductCard = ({product, key}: ProductCardProps) => {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
         <button
+            key={key}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             className="group relative h-full bg-white rounded-xl border border-gray-200 overflow-hidden transition-all duration-500 ease-in-out hover:border-blue-400 hover:shadow-xl hover:-translate-y-1"
