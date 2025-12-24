@@ -5,7 +5,7 @@ import {Dropdown} from "../Dropdown.tsx";
 import {Link} from "react-router-dom";
 
 interface DesktopMenuProps {
-    onLinkClick?: ((section: string) => void) | undefined
+    onLinkClick: ((section: string) => void) | undefined
 }
 
 export const DesktopMenu = ({onLinkClick}: DesktopMenuProps) => {
@@ -28,15 +28,10 @@ export const DesktopMenu = ({onLinkClick}: DesktopMenuProps) => {
                         />
                     </button>
 
-                    {openDropdown === item.id && (
-                        <div
-                            onMouseLeave={() => setOpenDropdown(0)}
-                            className="absolute top-full -left-10 pt-2">
-                            <div
-                                className="min-w-[250px] bg-blue-950/95 border border-secondary-light rounded-lg shadow-xl">
-                                <Dropdown onLinkClick={onLinkClick} items={item.dropdownItems}/>
-                            </div>
-                        </div>
+                    {openDropdown === item.id && item.dropdownItems?.length > 0 && item.dropdownItems && (
+                        <button onMouseLeave={() => setOpenDropdown(0)} className="absolute top-full -left-10">
+                            <Dropdown onLinkClick={onLinkClick} items={item.dropdownItems}/>
+                        </button>
                     )}
                 </Link>
             ))}

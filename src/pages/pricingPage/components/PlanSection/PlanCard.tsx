@@ -10,9 +10,8 @@ interface PlanCardProps {
 export const PlanCard = ({plan, isActive, onSelect}: PlanCardProps) => {
     return (
         <div
-            onClick={onSelect}
             className={`
-                cursor-pointer rounded-2xl mt-4 p-8 border transition-all duration-300
+                rounded-2xl mt-4 p-8 border transition-all duration-300
                 bg-slate-800/60 backdrop-blur
                 ${isActive ? 'border-secondary-light shadow-xl scale-[1.03]' : 'border-gray-700 hover:border-secondary-dark'}
             `}
@@ -44,6 +43,7 @@ export const PlanCard = ({plan, isActive, onSelect}: PlanCardProps) => {
             </ul>
 
             <button
+                onClick={onSelect}
                 className={`w-full mt-8 py-3 rounded-lg font-medium transition-all
                     ${isActive
                     ? 'bg-secondary text-white hover:bg-secondary-light'

@@ -213,12 +213,6 @@ const PRODUCTS: Product[] = [
     },
 ];
 
-
-
-
-
-
-
 const ProductDashboard = () => {
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -233,8 +227,12 @@ const ProductDashboard = () => {
             const matchesCategory =
                 !selectedCategory || product.category === CATEGORIES.find(c => c.id === selectedCategory)?.name;
 
-            const matchesSubCategory =
-                !selectedSubCategory || product.subCategory === CATEGORIES.find(c => c.id === selectedCategory)?.subCategories.find(s => s.id === selectedSubCategory)?.name;
+            const selectedSubCategoryName = CATEGORIES
+                .find(c => c.id === selectedCategory)
+                ?.subCategories?.find(s => s?.id === selectedSubCategory)?.name;
+
+            const matchesSubCategory = !selectedSubCategory || product.subCategory === selectedSubCategoryName;
+
 
             return matchesSearch && matchesCategory && matchesSubCategory;
         });
@@ -295,7 +293,7 @@ const ProductDashboard = () => {
 
                         {/* Products Grid */}
                         {filteredProducts.length > 0 ? (
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-in fade-in duration-500">
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-in fade-in duration-1000">
                                 {filteredProducts.map((product) => (
                                     <ProductCard key={product.id} product={product} />
                                 ))}

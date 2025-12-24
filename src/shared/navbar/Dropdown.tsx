@@ -1,26 +1,18 @@
 import type {DropdownItem} from "../../assets/data/navItems.ts";
 
 interface Dropdown {
-    items?: DropdownItem[],
-    onLinkClick?: ((section: string) => void) | undefined
+    items: DropdownItem[],
+    onLinkClick: ((section: string) => void) | undefined
 }
 
-export const Dropdown = ({items = [], onLinkClick}: Dropdown) => {
-    if (!items.length) {
-        return (
-            <div className="py-4 px-4 text-sm text-gray-500">
-                No items available
-            </div>
-        );
-    }
-
+export const Dropdown = ({items, onLinkClick}: Dropdown) => {
     return (
-        <div className="py-2">
-            {items.map((item, index) => (
-                <div
-                    key={index}
+        <div className="py-2 min-w-[250px] bg-blue-950/95 border border-secondary-light rounded-lg shadow-xl">
+            {items.map((item) => (
+                <button
+                    key={item.title}
                     onClick={() => onLinkClick ? onLinkClick(item.link) : "/"}
-                    className="flex items-start gap-3 px-4 py-3 hover:bg-primary transition-colors group"
+                    className="w-full rounded-none flex items-start gap-3 px-4 py-3 hover:bg-primary transition-colors group"
                 >
                     {item.icon && (
                         <span className="text-2xl flex-shrink-0 mt-0.5">{item.icon}</span>
@@ -33,7 +25,7 @@ export const Dropdown = ({items = [], onLinkClick}: Dropdown) => {
                             {item.description}
                         </p>
                     </div>
-                </div>
+                </button>
             ))}
         </div>
     );

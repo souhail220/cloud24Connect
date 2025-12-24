@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import {FormEvent, useState} from 'react';
 import { Link } from 'react-router-dom';
 import {Chrome, Eye, EyeOff, Github} from 'lucide-react';
 import {useNavigate} from "react-router";
@@ -8,22 +8,22 @@ export const LoginForm = () => {
     const [showPassword, setShowPassword] = useState(false);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [errors, setErrors] = useState<{ email?: string; password?: string }>({});
+    const [errors, setErrors] = useState<{ emailError?: string; passwordError?: string }>({});
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = (e: FormEvent) => {
         e.preventDefault();
-        const newErrors: { email?: string; password?: string } = {};
+        const newErrors: { emailError?: string; passwordError?: string } = {};
 
         if (!email) {
-            newErrors.email = 'Email is required';
+            newErrors.emailError = 'Email is required';
         } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-            newErrors.email = 'Please enter a valid email';
+            newErrors.emailError = 'Please enter a valid email';
         }
 
         if (!password) {
-            newErrors.password = 'Password is required';
+            newErrors.passwordError = 'Password is required';
         } else if (password.length < 6) {
-            newErrors.password = 'Password must be at least 6 characters';
+            newErrors.passwordError = 'Password must be at least 6 characters';
         }
 
         setErrors(newErrors);
@@ -55,15 +55,15 @@ export const LoginForm = () => {
                         value={email}
                         onChange={(e) => {
                             setEmail(e.target.value);
-                            if (errors.email) setErrors({ ...errors, email: undefined });
+                            if (errors.emailError) setErrors({ ...errors, email: undefined });
                         }}
                         className={`w-full px-4 py-3 bg-slate-700/50 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all ${
-                            errors.email ? "border-red-500" : "border-gray-600"
+                            errors.emailError ? "border-red-500" : "border-gray-600"
                         }`}
                         placeholder="you@example.com"
                     />
-                    {errors.email && (
-                        <p className="mt-1 text-sm text-red-400">{errors.email}</p>
+                    {errors.emailError && (
+                        <p className="mt-1 text-sm text-red-400">{errors.emailError}</p>
                     )}
                 </div>
 
@@ -81,10 +81,10 @@ export const LoginForm = () => {
                             value={password}
                             onChange={(e) => {
                                 setPassword(e.target.value);
-                                if (errors.password) setErrors({ ...errors, password: undefined });
+                                if (errors.passwordError) setErrors({ ...errors, password: undefined });
                             }}
                             className={`w-full px-4 py-3 bg-slate-700/50 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all pr-12 ${
-                                errors.password ? "border-red-500" : "border-gray-600"
+                                errors.passwordError ? "border-red-500" : "border-gray-600"
                             }`}
                             placeholder="Enter your password"
                         />
@@ -100,8 +100,8 @@ export const LoginForm = () => {
                             )}
                         </button>
                     </div>
-                    {errors.password && (
-                        <p className="mt-1 text-sm text-red-400">{errors.password}</p>
+                    {errors.passwordError && (
+                        <p className="mt-1 text-sm text-red-400">{errors.passwordError}</p>
                     )}
                 </div>
 

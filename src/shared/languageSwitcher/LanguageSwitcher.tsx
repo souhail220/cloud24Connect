@@ -29,7 +29,7 @@ export const LanguageSwitcher = () => {
             </button>
 
             {isLanguageOpen && (
-                <div
+                <button
                     onMouseLeave={toggleLanguageDropdown}
                     className="absolute top-full -right-8 mt-2 w-48 bg-white text-black border border-gray-200 rounded-lg shadow-xl overflow-hidden">
                     {LANGUAGES.map((language) => (
@@ -46,7 +46,7 @@ export const LanguageSwitcher = () => {
                             <span className="text-sm font-medium">{language.name}</span>
                         </button>
                     ))}
-                </div>
+                </button>
             )}
         </div>
     );

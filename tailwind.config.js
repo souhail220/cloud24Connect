@@ -5,14 +5,14 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#2b39cf", // main brand color
+          DEFAULT: "#2c25d5", // main brand color
           light: "#5c6eff",
           dark: "#020257",
         },
         secondary: {
-          DEFAULT: "#ff9100",
-          light: "#fa9c0e",
-          dark: "#f97316",
+          DEFAULT: "#f97316",
+          light: "#fb8a3c",
+          dark: "#ea670c",
         },
         background: "#d0e3f6ff",
       },

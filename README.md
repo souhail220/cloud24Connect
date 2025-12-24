@@ -20,6 +20,7 @@ This project follows a **clean, scalable folder structure** organized into `page
 **src/**
 - **assets/** → Images, icons, and global styles
 - **pages/** →  Page-level components mapped to routes
+- **hooks/** →  Reausable Process Interceptors
 - **components/** → Reusable UI elements (buttons, navbars, modals, etc.)
 - **shared/** → Shared utilities, hooks, contexts, and constants
 - **App.jsx/** → Main app component (defines routing)

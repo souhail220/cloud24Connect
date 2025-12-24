@@ -2,6 +2,7 @@ import "./TestimonialCards.css"
 
 const testimonials = [
     {
+        id:1,
         initials: "BO",
         name: "Bohdan Shenko",
         role: "Founder, D, Cyprus, Tango",
@@ -9,23 +10,27 @@ const testimonials = [
             "Not only about the price, but about providing a quality improving support and finding our business. Led us to lean now on DigitalOcean.",
     },
     {
+        id:2,
         name: "Richard Li",
         role: "CEO & Founder, Amorphous Data",
         quote: "Amorphous Data on Cloud24Connect GPU and Kubernetes",
     },
     {
+        id:3,
         name: "Andres Murcia",
         role: "CTO, Picap",
         quote:
             "We were previously on AWS but started migrating everything because we really love Cloud24Connect in terms of cost and support.",
     },
     {
+        id:4,
         name: "Matt Gray",
         role: "CEO, Served Hosting",
         quote:
             "How Served Scaled Their Craft CMS Platform with Cloud24Connect Kubernetes",
     },
     {
+        id:5,
         initials: "BO",
         name: "Bohdan Shenko",
         role: "Founder, D, Cyprus, Tango",
@@ -33,23 +38,27 @@ const testimonials = [
             "Not only about the price, but about providing a quality improving support and finding our business. Led us to lean now on DigitalOcean.",
     },
     {
+        id:6,
         name: "Richard Li",
         role: "CEO & Founder, Amorphous Data",
         quote: "Amorphous Data on Cloud24Connect GPU and Kubernetes",
     },
     {
+        id:7,
         name: "Andres Murcia",
         role: "CTO, Picap",
         quote:
             "We were previously on AWS but started migrating everything because we really love Cloud24Connect in terms of cost and support.",
     },
     {
+        id:8,
         name: "Matt Gray",
         role: "CEO, Served Hosting",
         quote:
             "How Served Scaled Their Craft CMS Platform with Cloud24Connect Kubernetes",
     },
     {
+        id:9,
         initials: "BO",
         name: "Bohdan Shenko",
         role: "Founder, D, Cyprus, Tango",
@@ -57,17 +66,20 @@ const testimonials = [
             "Not only about the price, but about providing a quality improving support and finding our business. Led us to lean now on DigitalOcean.",
     },
     {
+        id:10,
         name: "Richard Li",
         role: "CEO & Founder, Amorphous Data",
         quote: "Amorphous Data on Cloud24Connect GPU and Kubernetes",
     },
     {
+        id:11,
         name: "Andres Murcia",
         role: "CTO, Picap",
         quote:
             "We were previously on AWS but started migrating everything because we really love Cloud24Connect in terms of cost and support.",
     },
     {
+        id:12,
         name: "Matt Gray",
         role: "CEO, Served Hosting",
         quote:
@@ -85,7 +97,7 @@ const TestimonialCards = () => {
             <div className="testimonial-scroller">
                 {
                     testimonials.map((card, i) =>(
-                        <div key={i} className={`story-card card${(i % 4) + 1}`}>
+                        <div key={card.id} className={`story-card card${(i % 4) + 1}`}>
                             <div className="top-half">
                                 <h3>{card.name}</h3>
                                 <p>{card.role}</p>
