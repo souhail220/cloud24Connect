@@ -26,3 +26,4 @@ dist-ssr
 .scannerwork
 sonar-project.properties
 .env
+coverage/*
