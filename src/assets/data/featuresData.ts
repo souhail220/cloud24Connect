@@ -1,6 +1,14 @@
 import {Cloud, Database, Network, ShieldCheck, Video, Zap} from "lucide-react";
+import type { ComponentType, SVGProps } from "react";
 
-export const features = [
+export type Feature = {
+    id: number;
+    icon: ComponentType<SVGProps<SVGSVGElement>>;
+    title: string;
+    description: string;
+};
+
+export const features: Feature[] = [
     {
         id: 1,
         icon: Zap,
