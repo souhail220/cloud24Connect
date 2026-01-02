@@ -14,12 +14,8 @@ export const Features = () => {
                 <p className="text-xs sm:sm lg:text-base xl:text-lg w-8/12 mx-auto mt-2 mb-10">Comprehensive cloud solutions designed to accelerate your digital transformation journey.</p>
                 <div className="grid-container">
                     {features.map(feature => {
-                        const Icon = feature.icon;
                         return (
-                            <FeatureCard key={feature.id}
-                                         icon={<Icon className="w-11 h-11 mb-4 sm:w-16 sm:h-16 lg:w-20 lg:h-20 text-secondary-dark group-hover:text-white" /> }
-                                         title={feature.title} description={feature.description}
-                            />
+                            <FeatureCard key={feature.id} feature={feature}/>
                         )
                     })}
                 </div>

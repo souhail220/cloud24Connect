@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import { lazy, Suspense } from "react";
 import "./App.css";
 import ErrorBoundary from "./shared/ErrorBoundary/ErrorBoundary.tsx";
+import {ProductDetailsLayout} from "./pages/ProductDetails/ProductDetailsLayout.tsx";
 
 const HomeLayout = lazy(() => import("./pages/homePage/pageLayout/homeLayout"));
 const SignUpLayout = lazy(() => import("./pages/signUpPage/SignUpLayout.tsx"));
@@ -20,6 +21,7 @@ function App() {
                   <Route path="/signup" element={<SignUpLayout />} />
                   <Route path="/pricing" element={<PricingLayout />} />
                   <Route path="/products/dashboard" element={<ProductDashboard />} />
+                  <Route path="/products/:productId" element={<ProductDetailsLayout />} />
               </Routes>
           </ErrorBoundary>
       </Suspense>

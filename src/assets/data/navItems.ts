@@ -115,37 +115,37 @@ export const NAV_ITEMS: NavItem[] = [
     {
         id: 4,
         label: 'Products',
-        link: '/pricing',
+        link: '/products/dashboard',
         dropdownItems: [
             {
                 title: 'Cloud Connect',
                 description: 'Seamless cloud integration',
                 icon: '☁️',
-                link: '/products/cloud-connect'
+                link: '/products/dashboard'
             },
             {
                 title: 'Data Analytics',
                 description: 'Powerful insights from your data',
                 icon: '📊',
-                link: '/products/analytics'
+                link: '/products/dashboard'
             },
             {
                 title: 'Security Suite',
                 description: 'Enterprise-grade protection',
                 icon: '🔒',
-                link: '/products/security'
+                link: '/products/dashboard'
             },
             {
                 title: 'API Gateway',
                 description: 'Manage and secure your APIs',
                 icon: '🌐',
-                link: '/products/api-gateway'
+                link: '/products/dashboard'
             },
             {
                 title: 'Monitoring Tools',
                 description: 'Real-time system monitoring',
                 icon: '📈',
-                link: '/products/monitoring'
+                link: '/products/dashboard'
             }
         ]
     },
