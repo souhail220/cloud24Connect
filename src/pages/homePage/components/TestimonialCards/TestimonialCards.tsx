@@ -89,8 +89,8 @@ const testimonials = [
 
 const TestimonialCards = () => {
     return (
-        <div className="testimonial-container bg-gradient-to-b from-primary-dark to-primary">
-            <h2 className="testimonial-header font-bold bg-gradient-to-r from-secondary-dark to-secondary-light bg-clip-text text-transparent">
+        <div className="testimonial-container bg-gradient-to-b from-gray-50 to-gray-100 dark:from-primary-dark dark:to-primary">
+            <h2 className="testimonial-header font-bold bg-gradient-to-r from-primary to-primary-light dark:from-secondary-dark dark:to-secondary-light bg-clip-text text-transparent">
                 Customers growing with Cloud24Connect
             </h2>
             <p className="testimonial-description">See how developers and startups around the globe are building and scaling their applications on Cloud24Connect while saving money.</p>
@@ -104,7 +104,7 @@ const TestimonialCards = () => {
                             </div>
                             <div className="bottom-half">
                                 <p className="clamp">{card.quote}</p>
-                                <a href="#" className="case-study-link">Read case study <i className="fas fa-arrow-right" /></a>
+                                <a href="/case/study/1" className="case-study-link">Read case study <i className="fas fa-arrow-right" /></a>
                             </div>
                         </div>
                     ) )

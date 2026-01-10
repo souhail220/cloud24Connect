@@ -6,7 +6,7 @@ export default function HeroSection() {
     const { ref, isVisible } = useScrollAnimation(0.1);
 
     return (
-        <section className="hero-section bg-gradient-to-br from-primary-dark via-primary to-primary-dark">
+        <section className="hero-section bg-gradient-to-br from-[#2563eb] via-[#1e40af] to-[#60a5fa] dark:from-primary-dark dark:via-primary dark:to-primary-dark">
             <div ref={ref} className={`max-w-7xl mx-auto transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'} `}>
                 <div className="hero-section-container">
                     <div className="badge-container bg-cyan-500/20 border border-cyan-400/50">

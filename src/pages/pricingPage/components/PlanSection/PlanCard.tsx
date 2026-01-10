@@ -1,10 +1,11 @@
-import type {Plan} from "../../data/Plan.ts";
+import type {Plan, PlanType} from "../../data/Plan.ts";
 import {Zap} from "lucide-react";
 
 interface PlanCardProps {
     plan: Plan,
     isActive?: boolean,
-    onSelect?: () => void
+    onSelect?: () => void,
+    key?: PlanType
 }
 
 export const PlanCard = ({plan, isActive, onSelect}: PlanCardProps) => {
@@ -17,8 +18,9 @@ export const PlanCard = ({plan, isActive, onSelect}: PlanCardProps) => {
             `}
         >
             {plan.highlight && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-secondary to-secondary-dark text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center gap-2">
-                    <Zap className="w-4 h-4" />
+                <div
+                    className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-secondary to-secondary-dark text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center gap-2">
+                    <Zap className="w-4 h-4"/>
                     Most Popular
                 </div>
             )}
@@ -34,8 +36,8 @@ export const PlanCard = ({plan, isActive, onSelect}: PlanCardProps) => {
             </div>
 
             <ul className="mt-6 space-y-2 text-gray-300">
-                {plan.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center gap-2">
+                {plan.features.map(feature => (
+                    <li key={feature.name} className="flex items-center gap-2">
                         <span className="w-2 h-2 bg-secondary rounded-full"></span>
                         {feature.name}
                     </li>

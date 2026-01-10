@@ -18,7 +18,7 @@ const benefits = [
 export const GetStartedComponent = () => {
     const { ref, isVisible } = useScrollAnimation(0.1);
     return (
-        <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary-dark via-primary to-primary-dark overflow-hidden">
+        <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#2563eb] via-[#1e40af] to-[#60a5fa] dark:from-primary-dark dark:via-primary dark:to-primary-dark overflow-hidden">
 
             <div ref={ref} className={`max-w-4xl mx-auto text-center relative z-10 transform transition-all duration-1000 
             ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}
@@ -51,7 +51,7 @@ export const GetStartedComponent = () => {
                         <span>Start Free Trial</span>
                         <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </button>
-                    <button className="px-8 py-4 bg-transparent text-white rounded-lg border-2 border-secondary-light hover:border-secondary-dark hover:bg-cyan-500/10 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 font-semibold text-lg">
+                    <button className="px-8 py-4 bg-transparent text-white rounded-lg border-2 border-secondary-light hover:border-secondary-dark hover:bg-secondary-light dark:hover:bg-cyan-500/10 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 font-semibold text-lg">
                         Schedule Demo
                     </button>
                 </div>

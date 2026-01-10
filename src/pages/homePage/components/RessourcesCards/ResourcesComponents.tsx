@@ -51,12 +51,14 @@ const cards = [
 const ResourcesComponents = () => {
     const { ref, isVisible } = useScrollAnimation(0.1);
     return (
-        <section className="resource-container bg-gradient-to-b from-primary to-primary">
+        <section className="resource-container bg-gradient-to-b from-gray-50 to-gray-100 dark:from-primary dark:to-primary">
             <div ref={ref}
                  className={`transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}
             >
-                <h2 className="text-2xl lg:text-4xl xl:text-5xl font-bold text-secondary">Resources and Support</h2>
-                <p className="resource-subtitle text-white">
+                <h2 className="text-2xl lg:text-4xl xl:text-5xl font-bold bg-gradient-to-r from-primary to-primary-light dark:from-secondary-dark dark:to-secondary-light bg-clip-text text-transparent">
+                    Resources and Support
+                </h2>
+                <p className="resource-subtitle text-gray-700 dark:text-white">
                     Our cloud is built to be simple and powerful, so you can spend your time
                     focusing on building apps, not pulling your hair out.
                 </p>
@@ -69,7 +71,7 @@ const ResourcesComponents = () => {
                                 <span className="card-label">{card.label}</span>
                             </div>
                             <h3 className="card-title">{card.title}</h3>
-                            <a href="#" className="card-link">Read more →</a>
+                            <a href={`ressource/${card.id}`} className="card-link">Read more →</a>
                         </div>
                     ))}
                 </div>

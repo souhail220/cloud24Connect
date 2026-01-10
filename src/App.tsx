@@ -3,6 +3,7 @@ import { lazy, Suspense } from "react";
 import "./App.css";
 import ErrorBoundary from "./shared/ErrorBoundary/ErrorBoundary.tsx";
 import {ProductDetailsLayout} from "./pages/ProductDetails/ProductDetailsLayout.tsx";
+import {ThemeProvider} from "./context/ThemeContext.tsx";
 
 const HomeLayout = lazy(() => import("./pages/homePage/pageLayout/homeLayout"));
 const SignUpLayout = lazy(() => import("./pages/signUpPage/SignUpLayout.tsx"));
@@ -12,6 +13,7 @@ const ProductDashboard = lazy(() => import("./pages/ProductDashboard/ProductDash
 
 function App() {
   return (
+      <ThemeProvider>
       <BrowserRouter>
       <Suspense fallback={<div className="flex items-center justify-center min-h-screen text-white">Loading...</div>}>
           <ErrorBoundary>
@@ -26,6 +28,7 @@ function App() {
           </ErrorBoundary>
       </Suspense>
       </BrowserRouter>
+      </ThemeProvider>
   );
 }
 

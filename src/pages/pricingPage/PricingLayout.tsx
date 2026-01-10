@@ -34,7 +34,7 @@ const PricingLayout = () => {
     const [selectedPlan, setSelectedPlan] = useState<PlanType>('pro');
 
   return (
-    <div className="min-h-screen mt-8 bg-gradient-to-br from-primary-dark via-primary to-primary-dark flex flex-col">
+    <div className="min-h-screen mt-8 bg-gradient-to-br from-gray-50 via-gray-100 to-gray-50 dark:from-primary-dark dark:via-primary dark:to-primary-dark flex flex-col">
         <Navbar
             onLinkClick={(section) => {
                 switch(section) {

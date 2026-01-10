@@ -1,4 +1,3 @@
-// Footer.js
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebookF,
@@ -12,7 +11,7 @@ import "./footer.css";
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer bg-gradient-to-bl from-[#2563eb] via-[#1e40af] to-[#60a5fa] dark:from-primary-dark dark:via-primary dark:to-primary-dark">
       <div className="footer-container">
         <div className="top">
           <div className="logo-section">
@@ -44,7 +43,7 @@ const Footer = () => {
                   height="24px"
                   viewBox="0 -960 960 960"
                   width="24px"
-                  fill="#000000"
+                  fill="/000000"
                 >
                   <path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80ZM364-182l48-110q-42-15-72.5-46.5T292-412l-110 46q23 64 71 112t111 72Zm-72-366q17-42 47.5-73.5T412-668l-46-110q-64 24-112 72t-72 112l110 46Zm188 188q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm116 178q63-24 110.5-71.5T778-364l-110-48q-15 42-46 72.5T550-292l46 110Zm72-368 110-46q-24-63-71.5-110.5T596-778l-46 112q41 15 71 45.5t47 70.5Z" />
                 </svg>
@@ -56,31 +55,31 @@ const Footer = () => {
             <h3>COMPANY</h3>
             <ul>
               <li>
-                <a href="#">About</a>
+                <a href="/">About</a>
               </li>
               <li>
-                <a href="#">Data Centers</a>
+                <a href="/">Data Centers</a>
               </li>
               <li>
-                <a href="#">Partners</a>
+                <a href="/">Partners</a>
               </li>
               <li>
-                <a href="#">Pricing</a>
+                <a href="/">Pricing</a>
               </li>
               <li>
-                <a href="#">Support</a>
+                <a href="/">Support</a>
               </li>
               <li>
-                <a href="#">FAQ</a>
+                <a href="/">FAQ</a>
               </li>
               <li>
-                <a href="#">Knowledgebase</a>
+                <a href="/">Knowledgebase</a>
               </li>
               <li>
-                <a href="#">Blog</a>
+                <a href="/">Blog</a>
               </li>
               <li>
-                <a href="#">Reviews</a>
+                <a href="/">Reviews</a>
               </li>
             </ul>
           </div>
@@ -89,31 +88,31 @@ const Footer = () => {
             <h3>PRODUCTS</h3>
             <ul>
               <li>
-                <a href="#">Cloud Servers</a>
+                <a href="/">Cloud Servers</a>
               </li>
               <li>
-                <a href="#">Cloud Desktop</a>
+                <a href="/">Cloud Desktop</a>
               </li>
               <li>
-                <a href="#">Virtual Private Cloud</a>
+                <a href="/">Virtual Private Cloud</a>
               </li>
               <li>
-                <a href="#">Cloud Firewall</a>
+                <a href="/">Cloud Firewall</a>
               </li>
               <li>
-                <a href="#">Load Balancers</a>
+                <a href="/">Load Balancers</a>
               </li>
               <li>
-                <a href="#">Block Storage</a>
+                <a href="/">Block Storage</a>
               </li>
               <li>
-                <a href="#">Reseller Hosting</a>
+                <a href="/">Reseller Hosting</a>
               </li>
               <li>
-                <a href="#">Cloud VPS</a>
+                <a href="/">Cloud VPS</a>
               </li>
               <li>
-                <a href="#">Windows VPS</a>
+                <a href="/">Windows VPS</a>
               </li>
             </ul>
           </div>
@@ -122,31 +121,31 @@ const Footer = () => {
             <h3>SOLUTIONS</h3>
             <ul>
               <li>
-                <a href="#">Managed Cloud Services</a>
+                <a href="/">Managed Cloud Services</a>
               </li>
               <li>
-                <a href="#">Disaster Recovery</a>
+                <a href="/">Disaster Recovery</a>
               </li>
               <li>
-                <a href="#">Startups</a>
+                <a href="/">Startups</a>
               </li>
               <li>
-                <a href="#">SMB</a>
+                <a href="/">SMB</a>
               </li>
               <li>
-                <a href="#">Enterprise</a>
+                <a href="/">Enterprise</a>
               </li>
               <li>
-                <a href="#">Web Developers</a>
+                <a href="/">Web Developers</a>
               </li>
               <li>
-                <a href="#">App Developers</a>
+                <a href="/">App Developers</a>
               </li>
               <li>
-                <a href="#">E-Commerce</a>
+                <a href="/">E-Commerce</a>
               </li>
               <li>
-                <a href="#">SaaS Providers</a>
+                <a href="/">SaaS Providers</a>
               </li>
             </ul>
           </div>
@@ -155,33 +154,33 @@ const Footer = () => {
         <div className="privacy">
           <span>© 2025 Cloud2Connect, Inc., All rights reserved</span>
           <div className="privacy-links">
-            <a href="#" className="privacy-link">
+            <a href="/" className="privacy-link">
               Privacy policy
             </a>
-            <a href="#" className="privacy-link">
+            <a href="/" className="privacy-link">
               Terms of use
             </a>
-            <a href="#" className="privacy-link">
+            <a href="/" className="privacy-link">
               Report security issues
             </a>
-            <a href="#" className="privacy-link">
+            <a href="/" className="privacy-link">
               Trademark
             </a>
           </div>
           <div className="social-icons">
-            <a href="#">
+            <a href="/">
               <FontAwesomeIcon icon={faFacebookF} className="social-icon" />
             </a>
-            <a href="#">
+            <a href="/">
               <FontAwesomeIcon icon={faLinkedinIn} className="social-icon" />
             </a>
-            <a href="#">
+            <a href="/">
               <FontAwesomeIcon icon={faXTwitter} className="social-icon" />
             </a>
-            <a href="#">
+            <a href="/">
               <FontAwesomeIcon icon={faYoutube} className="social-icon" />
             </a>
-            <a href="#">
+            <a href="/">
               <FontAwesomeIcon icon={faInstagram} className="social-icon" />
             </a>
           </div>
