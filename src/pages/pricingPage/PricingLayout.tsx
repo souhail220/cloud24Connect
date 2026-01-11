@@ -8,6 +8,7 @@ import {ComparisonTable} from "./components/ComparisonTable.tsx";
 import {VolumeDiscountSection} from "./components/VolumeDiscountSection.tsx";
 import {FreeTrialCTA} from "./components/FreeTrialCTA.tsx";
 import {PlanSection} from "./components/PlanSection/PlanSection.tsx";
+import {useTheme} from "../../context/ThemeContext.tsx";
 
 const PricingLayout = () => {
 
@@ -29,12 +30,12 @@ const PricingLayout = () => {
             });
         }
     };
-
+    const {theme} = useTheme();
 
     const [selectedPlan, setSelectedPlan] = useState<PlanType>('pro');
 
   return (
-    <div className="min-h-screen mt-8 bg-gradient-to-br from-gray-50 via-gray-100 to-gray-50 dark:from-primary-dark dark:via-primary dark:to-primary-dark flex flex-col">
+    <div className="min-h-screen flex flex-col gap-0 bg-gradient-to-br from-gray-50 via-gray-100 to-gray-50 dark:from-primary-dark dark:via-primary dark:to-primary-dark">
         <Navbar
             onLinkClick={(section) => {
                 switch(section) {
@@ -48,8 +49,8 @@ const PricingLayout = () => {
             }}
         />
 
-        <main className="flex-1 pt-24 pb-20 space-y-20">
-            <div ref={planRef}>
+        <main className="pricing-main-content flex-1 pb-20 space-y-20">
+            <div className={`pt-32 pb-8 ${theme === 'light' ? 'bg-[#1d4ed8]' : ''}`} ref={planRef}>
                 <PlanSection selectedPlan={selectedPlan} onSelect={setSelectedPlan} />
             </div>
 

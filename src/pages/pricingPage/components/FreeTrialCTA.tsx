@@ -7,7 +7,7 @@ export const FreeTrialCTA = () => {
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
             <div 
                 ref={ref}
-                className={`bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border-2 border-cyan-500/30 rounded-2xl p-12 text-center backdrop-blur-sm
+                className={`bg-gradient-to-r from-primary to-primary-light dark:from-cyan-500/10 dark:to-blue-500/10 border-2 border-cyan-500/30 rounded-2xl p-12 text-center backdrop-blur-sm
                 transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}
                 `}>
                 <h2 className="text-3xl font-bold text-white mb-4">

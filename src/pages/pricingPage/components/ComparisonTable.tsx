@@ -8,10 +8,10 @@ export const ComparisonTable = () => {
            <div ref={ref} className={`transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
                {/*Page's title*/}
                <div className="text-center mb-12">
-                   <h2 className="text-3xl sm:text-4xl font-bold text-secondary-dark mb-4">
+                   <h2 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-primary to-primary-light dark:from-secondary-dark dark:to-secondary bg-clip-text text-transparent mb-4">
                        Compare All Plans
                    </h2>
-                   <p className="text-gray-300 text-lg">
+                   <p className="text-gray-800 dark:text-gray-300 text-lg">
                        See exactly what's included in each tier
                    </p>
                </div>
@@ -20,25 +20,25 @@ export const ComparisonTable = () => {
                    <table className="w-full">
                        <thead>
                        <tr className="border-b border-gray-600">
-                           <th className="text-left py-4 px-4 font-semibold text-white w-48">
+                           <th className="text-left py-4 px-4 font-semibold text-secondary dark:text-white w-48">
                                Feature
                            </th>
-                           <th className="text-center py-4 px-4 font-semibold text-white">
+                           <th className="text-center py-4 px-4 font-semibold text-secondary dark:text-white">
                                Starter
                            </th>
-                           <th className="text-center py-4 px-4 font-semibold text-white">
+                           <th className="text-center py-4 px-4 font-semibold text-secondary dark:text-white">
                                Professional
                            </th>
-                           <th className="text-center py-4 px-4 font-semibold text-white">
+                           <th className="text-center py-4 px-4 font-semibold text-secondary dark:text-white">
                                Enterprise
                            </th>
                        </tr>
                        </thead>
                        <tbody>
                        <tr className="border-b border-gray-600/50 hover:bg-slate-800/30 transition-colors">
-                           <td className="py-4 px-4 text-gray-300">Cloud accounts</td>
+                           <td className="py-4 px-4 text-gray-800 dark:text-gray-300">Cloud accounts</td>
                            <td className="py-4 px-4 text-center">
-                               <span className="text-white font-semibold">3</span>
+                               <span className="text-gray-500 dark:text-white font-semibold">3</span>
                            </td>
                            <td className="py-4 px-4 text-center">
                                <Check className="w-5 h-5 text-green-400 mx-auto" />
@@ -49,33 +49,33 @@ export const ComparisonTable = () => {
                        </tr>
 
                        <tr className="border-b border-gray-600/50 hover:bg-slate-800/30 transition-colors">
-                           <td className="py-4 px-4 text-gray-300">Data retention</td>
+                           <td className="py-4 px-4 text-gray-800 dark:text-gray-300">Data retention</td>
                            <td className="py-4 px-4 text-center">
-                               <span className="text-white font-semibold">7 days</span>
+                               <span className="text-gray-500 dark:text-white font-semibold">7 days</span>
                            </td>
                            <td className="py-4 px-4 text-center">
-                               <span className="text-white font-semibold">90 days</span>
+                               <span className="text-gray-500 dark:text-white font-semibold">90 days</span>
                            </td>
                            <td className="py-4 px-4 text-center">
-                               <span className="text-white font-semibold">Unlimited</span>
-                           </td>
-                       </tr>
-
-                       <tr className="border-b border-gray-600/50 hover:bg-slate-800/30 transition-colors">
-                           <td className="py-4 px-4 text-gray-300">Monitoring</td>
-                           <td className="py-4 px-4 text-center">
-                               <span className="text-white font-semibold">Basic</span>
-                           </td>
-                           <td className="py-4 px-4 text-center">
-                               <span className="text-white font-semibold">Advanced</span>
-                           </td>
-                           <td className="py-4 px-4 text-center">
-                               <span className="text-white font-semibold">Custom</span>
+                               <span className="text-gray-500 dark:text-white font-semibold">Unlimited</span>
                            </td>
                        </tr>
 
                        <tr className="border-b border-gray-600/50 hover:bg-slate-800/30 transition-colors">
-                           <td className="py-4 px-4 text-gray-300">Alerts & notifications</td>
+                           <td className="py-4 px-4 text-gray-800 dark:text-gray-300">Monitoring</td>
+                           <td className="py-4 px-4 text-center">
+                               <span className="text-gray-500 dark:text-white font-semibold">Basic</span>
+                           </td>
+                           <td className="py-4 px-4 text-center">
+                               <span className="text-gray-500 dark:text-white font-semibold">Advanced</span>
+                           </td>
+                           <td className="py-4 px-4 text-center">
+                               <span className="text-gray-500 dark:text-white font-semibold">Custom</span>
+                           </td>
+                       </tr>
+
+                       <tr className="border-b border-gray-600/50 hover:bg-slate-800/30 transition-colors">
+                           <td className="py-4 px-4 text-gray-800 dark:text-gray-300">Alerts & notifications</td>
                            <td className="py-4 px-4 text-center">
                                <X className="w-5 h-5 text-secondary mx-auto" />
                            </td>
@@ -88,7 +88,7 @@ export const ComparisonTable = () => {
                        </tr>
 
                        <tr className="border-b border-gray-600/50 hover:bg-slate-800/30 transition-colors">
-                           <td className="py-4 px-4 text-gray-300">Advanced analytics</td>
+                           <td className="py-4 px-4 text-gray-800 dark:text-gray-300">Advanced analytics</td>
                            <td className="py-4 px-4 text-center">
                                <X className="w-5 h-5 text-secondary mx-auto" />
                            </td>
@@ -101,7 +101,7 @@ export const ComparisonTable = () => {
                        </tr>
 
                        <tr className="border-b border-gray-600/50 hover:bg-slate-800/30 transition-colors">
-                           <td className="py-4 px-4 text-gray-300">API access</td>
+                           <td className="py-4 px-4 text-gray-800 dark:text-gray-300">API access</td>
                            <td className="py-4 px-4 text-center">
                                <X className="w-5 h-5 text-secondary mx-auto" />
                            </td>
@@ -114,33 +114,33 @@ export const ComparisonTable = () => {
                        </tr>
 
                        <tr className="border-b border-gray-600/50 hover:bg-slate-800/30 transition-colors">
-                           <td className="py-4 px-4 text-gray-300">Support</td>
+                           <td className="py-4 px-4 text-gray-800 dark:text-gray-300">Support</td>
                            <td className="py-4 px-4 text-center">
-                               <span className="text-white font-semibold">Email</span>
+                               <span className="text-gray-500 dark:text-white font-semibold">Email</span>
                            </td>
                            <td className="py-4 px-4 text-center">
-                               <span className="text-white font-semibold">Priority</span>
+                               <span className="text-gray-500 dark:text-white font-semibold">Priority</span>
                            </td>
                            <td className="py-4 px-4 text-center">
-                               <span className="text-white font-semibold">24/7</span>
-                           </td>
-                       </tr>
-
-                       <tr className="border-b border-gray-600/50 hover:bg-slate-800/30 transition-colors">
-                           <td className="py-4 px-4 text-gray-300">Team members</td>
-                           <td className="py-4 px-4 text-center">
-                               <span className="text-white font-semibold">1</span>
-                           </td>
-                           <td className="py-4 px-4 text-center">
-                               <span className="text-white font-semibold">Up to 10</span>
-                           </td>
-                           <td className="py-4 px-4 text-center">
-                               <span className="text-white font-semibold">Unlimited</span>
+                               <span className="text-gray-500 dark:text-white font-semibold">24/7</span>
                            </td>
                        </tr>
 
                        <tr className="border-b border-gray-600/50 hover:bg-slate-800/30 transition-colors">
-                           <td className="py-4 px-4 text-gray-300">Custom integrations</td>
+                           <td className="py-4 px-4 text-gray-800 dark:text-gray-300">Team members</td>
+                           <td className="py-4 px-4 text-center">
+                               <span className="text-gray-500 dark:text-white font-semibold">1</span>
+                           </td>
+                           <td className="py-4 px-4 text-center">
+                               <span className="text-gray-500 dark:text-white font-semibold">Up to 10</span>
+                           </td>
+                           <td className="py-4 px-4 text-center">
+                               <span className="text-gray-500 dark:text-white font-semibold">Unlimited</span>
+                           </td>
+                       </tr>
+
+                       <tr className="border-b border-gray-600/50 hover:bg-slate-800/30 transition-colors">
+                           <td className="py-4 px-4 text-gray-800 dark:text-gray-300">Custom integrations</td>
                            <td className="py-4 px-4 text-center">
                                <X className="w-5 h-5 text-secondary mx-auto" />
                            </td>
@@ -153,15 +153,15 @@ export const ComparisonTable = () => {
                        </tr>
 
                        <tr className="hover:bg-slate-800/30 transition-colors">
-                           <td className="py-4 px-4 text-gray-300">SLA guarantee</td>
+                           <td className="py-4 px-4 text-gray-800 dark:text-gray-300">SLA guarantee</td>
                            <td className="py-4 px-4 text-center">
                                <X className="w-5 h-5 text-secondary mx-auto" />
                            </td>
                            <td className="py-4 px-4 text-center">
-                               <span className="text-white font-semibold">99.5%</span>
+                               <span className="text-gray-500 dark:text-white font-semibold">99.5%</span>
                            </td>
                            <td className="py-4 px-4 text-center">
-                               <span className="text-white font-semibold">99.99%</span>
+                               <span className="text-gray-500 dark:text-white font-semibold">99.99%</span>
                            </td>
                        </tr>
                        </tbody>
