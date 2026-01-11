@@ -6,7 +6,7 @@ interface FeatureCardProps {
     key?: number
 }
 
-export default function FeatureCard({feature}: Readonly<FeatureCardProps>) {
+export const FeatureCard = ({feature}: Readonly<FeatureCardProps>) => {
     const Icon = feature.icon;
     return (
         <div
