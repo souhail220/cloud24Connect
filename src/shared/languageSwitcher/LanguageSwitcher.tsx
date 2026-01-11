@@ -14,10 +14,10 @@ export const LanguageSwitcher = () => {
     };
 
     return (
-        <div className="relative">
+        <div className="relative mr-1">
             <button
                 onClick={toggleLanguageDropdown}
-                className="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-800 transition-colors text-sm"
+                className="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-400 dark:hover:bg-gray-800 transition-colors text-sm"
             >
                 <Globe color="#f97316" size={18} />
                 <span>{selectedLanguage.flag}</span>
