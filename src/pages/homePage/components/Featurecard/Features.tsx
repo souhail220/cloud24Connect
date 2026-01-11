@@ -1,7 +1,7 @@
 import "./featureCard.css"
 import {useScrollAnimation} from "../../../../hooks/useScrollAnimation.ts";
 import {features} from "../../../../assets/data/featuresData.ts";
-import FeatureCard from "./featurecard.tsx";
+import FeatureCard from "./Featurecard.tsx";
 
 export const Features = () => {
     const { ref, isVisible } = useScrollAnimation(0.1);
