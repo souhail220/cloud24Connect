@@ -7,7 +7,7 @@ interface FeatureCardProps {
     key?: number
 }
 
-export const FeatureCard = ({feature}: Readonly<FeatureCardProps>) => {
+export const Featurecard = ({feature}: Readonly<FeatureCardProps>) => {
     const Icon: ComponentType<SVGProps<SVGSVGElement>> = feature.icon;
     return (
         <div

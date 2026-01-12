@@ -1,7 +1,7 @@
 import "./featureCard.css"
 import {useScrollAnimation} from "../../../../hooks/useScrollAnimation.ts";
 import {features} from "../../../../assets/data/featuresData.ts";
-import {FeatureCard} from "./Featurecard.tsx";
+import {Featurecard} from "./Featurecard.tsx";
 
 export const Features = () => {
     const { ref, isVisible } = useScrollAnimation(0.1);
@@ -15,7 +15,7 @@ export const Features = () => {
                 <div className="grid-container">
                     {features.map(feature => {
                         return (
-                            <FeatureCard key={feature.id} feature={feature}/>
+                            <Featurecard key={feature.id} feature={feature}/>
                         )
                     })}
                 </div>
