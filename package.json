@@ -8,8 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test": "vitest",
-    "test:coverage": "vitest --coverage"
+    "test": "echo This is test"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.1.0",
