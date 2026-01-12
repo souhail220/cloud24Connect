@@ -39,17 +39,29 @@
   color: #cc7a00;
 }
 
+.dark .card:hover .card-label {
+    color: #2c25d5;
+}
+
 .card:hover .card-icon {
   color: #cc7a00;
+}
+
+.dark .card:hover .card-icon {
+    color: #2c25d5;
 }
 
 .card-header {
   display: flex;
   align-items: center;
   gap: 8px;
-  color: #1976d2;
+  color: #fb8a3c;
   font-weight: 600;
   margin-bottom: 12px;
+}
+
+.dark .card-header{
+    color: #1976d2;
 }
 
 .card-icon {
@@ -65,15 +77,23 @@
 }
 
 .card-link {
-  color: #1976d2;
+    color: #fb8a3c;
   font-weight: 500;
   text-decoration: none;
   font-size: 0.9rem;
 }
 
+.dark .card-link {
+    color: #1976d2;
+}
+
 .card-link:hover {
   text-decoration: underline;
   color: #ffc400;
+}
+
+.dark .card-link:hover {
+    color: #2c25d5;
 }
 
 @media (max-width: 768px) {

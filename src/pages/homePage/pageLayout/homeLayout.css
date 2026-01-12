@@ -9,7 +9,6 @@
 }
 
 .main-content {
-  /*  background-image: url("../../../assets/background-img2.png");*/
   background-size: cover;
   min-height: calc(100vh - 70px); /* ensure it fills the viewport minus navbar height */
   overflow-y: auto; /* scroll if content too tall */
@@ -21,9 +20,4 @@
   border: none;
   border-top: 1px solid #b4b4b4;
   margin-top: 40px;
-}
-
-@media (max-width: 768px) {
-  .home-layout {
-  }
 }

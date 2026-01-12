@@ -1,4 +1,5 @@
-import {FormEvent, useState} from 'react';
+import {useState} from 'react';
+import type { FormEvent } from 'react';
 import { Link } from 'react-router-dom';
 import {Chrome, Eye, EyeOff, Github} from 'lucide-react';
 import {useNavigate} from "react-router";
@@ -10,13 +11,15 @@ export const LoginForm = () => {
     const [password, setPassword] = useState('');
     const [errors, setErrors] = useState<{ emailError?: string; passwordError?: string }>({});
 
+    const SAFE_EMAIL_REGEX = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+
     const handleSubmit = (e: FormEvent) => {
         e.preventDefault();
         const newErrors: { emailError?: string; passwordError?: string } = {};
 
         if (!email) {
             newErrors.emailError = 'Email is required';
-        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        } else if (!SAFE_EMAIL_REGEX.test(email)) {
             newErrors.emailError = 'Please enter a valid email';
         }
 
@@ -55,7 +58,7 @@ export const LoginForm = () => {
                         value={email}
                         onChange={(e) => {
                             setEmail(e.target.value);
-                            if (errors.emailError) setErrors({ ...errors, email: undefined });
+                            if (errors.emailError) setErrors({ ...errors, emailError: undefined });
                         }}
                         className={`w-full px-4 py-3 bg-slate-700/50 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all ${
                             errors.emailError ? "border-red-500" : "border-gray-600"
@@ -81,7 +84,7 @@ export const LoginForm = () => {
                             value={password}
                             onChange={(e) => {
                                 setPassword(e.target.value);
-                                if (errors.passwordError) setErrors({ ...errors, password: undefined });
+                                if (errors.passwordError) setErrors({ ...errors, passwordError: undefined });
                             }}
                             className={`w-full px-4 py-3 bg-slate-700/50 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all pr-12 ${
                                 errors.passwordError ? "border-red-500" : "border-gray-600"
@@ -114,7 +117,7 @@ export const LoginForm = () => {
                         <span className="ml-2 text-sm text-gray-400">Remember me</span>
                     </label>
                     <a
-                        href="#"
+                        href="/"
                         className="text-sm text-secondary-dark hover:text-secondary transition-colors"
                     >
                         Forgot password?

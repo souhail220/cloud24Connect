@@ -7,7 +7,7 @@ const SignUpLayout = () => {
     const {ref, isVisible} = useScrollAnimation(0.1);
 
     return (
-        <div className="min-h-screen mt-16 bg-gradient-to-br from-primary-dark via-primary to-primary-dark flex flex-col">
+        <div className="min-h-screen mt-16 bg-gradient-to-br from-gray-50 via-gray-100 to-gray-50 dark:from-primary-dark dark:via-primary dark:to-primary-dark flex flex-col">
             <Navbar />
             <div className="flex-1 flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12">
                 <div className="w-full xl:max-w-3xl lg:max-w-xl max-w-md">

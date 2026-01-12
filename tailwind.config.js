@@ -1,5 +1,6 @@
 // tailwind.config.js
 export default {
+  darkMode: 'class',
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
@@ -15,6 +16,11 @@ export default {
           dark: "#ea670c",
         },
         background: "#d0e3f6ff",
+        // Light mode specific colors
+        'light-bg': '#f5f5f5',
+        'light-card': '#ffffff',
+        'light-text': '#213547',
+        'light-text-secondary': '#64748b',
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],

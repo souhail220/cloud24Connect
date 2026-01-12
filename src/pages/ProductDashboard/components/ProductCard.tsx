@@ -4,10 +4,10 @@ import type {Product} from "../../../assets/data/Product.data.ts";
 
 interface ProductCardProps {
     product: Product,
-    key: string
+    key?: string
 }
 
-export const ProductCard = ({product, key}: ProductCardProps) => {
+export const ProductCard = ({product}: ProductCardProps) => {
     const [isHovered, setIsHovered] = useState(false);
     const navigate = useNavigate();
     const Icon = product.icon;

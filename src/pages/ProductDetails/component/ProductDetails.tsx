@@ -1,11 +1,12 @@
 import type {Product} from "../../../assets/data/Product.data.ts";
+import type {ComponentType, SVGProps} from "react";
 
 interface ProductDetailsProps {
     product: Product
 }
 
 export const ProductDetails = ({product}: ProductDetailsProps) => {
-    const Icon = product.icon;
+    const Icon: ComponentType<SVGProps<SVGSVGElement>> = product.icon;
     return (
         <div className="p-2 grid md:grid-cols-2 gap-8 items-start">
             <div className="flex justify-center items-center overflow-hidden bg-white p-6 min-h-full md:h-auto rounded-xl">
@@ -17,7 +18,7 @@ export const ProductDetails = ({product}: ProductDetailsProps) => {
             <div className="p-8">
                 <div className="flex items-start gap-4 mb-4">
                     <div className="p-4 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg text-secondary">
-                        {<Icon />}
+                        <Icon />
                     </div>
                     <div>
                         <p className="text-sm text-gray-500 font-semibold uppercase">{product.category}</p>

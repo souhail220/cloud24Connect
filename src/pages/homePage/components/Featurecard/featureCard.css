@@ -6,6 +6,22 @@
     gap: 2.25rem;
 }
 
+.card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    border: 1px solid transparent;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
+}
+
+.card-container:hover{
+    border-color: white;
+}
+
 @media (max-width: 420px) {
     .card-container {
         width: 80%;

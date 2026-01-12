@@ -28,7 +28,7 @@ export const DesktopMenu = ({onLinkClick}: DesktopMenuProps) => {
                         />
                     </button>
 
-                    {openDropdown === item.id && item.dropdownItems?.length > 0 && item.dropdownItems && (
+                    {openDropdown === item.id && (item.dropdownItems?.length ?? 0) > 0 && item.dropdownItems && (
                         <button onMouseLeave={() => setOpenDropdown(0)} className="absolute top-full -left-10">
                             <Dropdown onLinkClick={onLinkClick} items={item.dropdownItems}/>
                         </button>
