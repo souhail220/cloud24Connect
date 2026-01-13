@@ -64,7 +64,7 @@ export const ServiceCard = ({service, serviceConfig, onRemove, onUpdateOption}: 
                     </p>
                     <button
                         onClick={() => onRemove(service.id)}
-                        className="p-2 text-red-400 hover:bg-red-500/10 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-red-500"
+                        className="p-2 text-red-500 dark:text-red-400 hover:bg-red-100 dark:hover:bg-red-500/10 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-red-500"
                         title="Remove service"
                         aria-label={`Remove ${service.serviceName}`}
                     >

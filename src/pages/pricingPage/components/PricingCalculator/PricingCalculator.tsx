@@ -170,7 +170,7 @@ export const PricingCalculator = () => {
                                                       <p className="text-gray-800 dark:text-white font-semibold group-hover:text-secondary-light dark:group-hover:text-cyan-400 transition-colors">
                                                           {service.name}
                                                       </p>
-                                                      <p className="text-gray-400 text-sm">
+                                                      <p className="text-gray-600 dark:text-gray-400 text-sm">
                                                           {service.description}
                                                       </p>
                                                   </div>

@@ -18,7 +18,7 @@ export const Dropdown = ({items, onLinkClick}: Dropdown) => {
                         <span className="text-2xl flex-shrink-0 mt-0.5">{item.icon}</span>
                     )}
                     <div>
-                        <p className="font-semibold text-sm text-start text-secondary group-hover:text-secondary-light transition-colors">
+                        <p className="font-semibold text-sm text-start text-gray-900 dark:text-secondary group-hover:text-secondary dark:group-hover:text-secondary-light transition-colors">
                             {item.title}
                         </p>
                         <p className="text-xs text-start text-gray-800 dark:text-white mt-0.5">

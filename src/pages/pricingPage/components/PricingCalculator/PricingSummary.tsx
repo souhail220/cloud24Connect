@@ -15,7 +15,7 @@ export const PricingSummary = ({selectedServices, monthlyPrice, annualPrice, ann
                 className="sticky top-24 bg-gradient-to-br to-[#60a5fa] from-primary-light dark:from-cyan-500/10 dark:to-blue-500/10 border-2 border-cyan-500/30 rounded-2xl p-8 backdrop-blur-sm">
                 <h3 className="text-xl font-bold text-white">Pricing Summary</h3>
 
-                <div className="space-y-4 mb-8 pb-8 border-b border-cyan-500/20">
+                <div className="space-y-4 mb-8 pb-8 border-b border-gray-300 dark:border-cyan-500/20">
                     {selectedServices.length === 0 ? (
                         <p className="text-gray-700 dark:text-gray-400 text-center mt-4">
                             Add services to see pricing
@@ -49,7 +49,7 @@ export const PricingSummary = ({selectedServices, monthlyPrice, annualPrice, ann
                         </span>
                     </div>
                     {annualSavings > 0 && (
-                        <div className="text-xs text-green-400 text-right">
+                        <div className="text-xs text-green-600 dark:text-green-400 text-right">
                             Save ${Math.round(annualSavings)} annually
                         </div>
                     )}
