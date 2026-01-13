@@ -5,12 +5,13 @@ import {useScrollAnimation} from "../../../../hooks/useScrollAnimation.ts";
 import {ServiceCard} from "./ServiceCard.tsx";
 import {PricingSummary} from "./PricingSummary.tsx";
 import {AVAILABLE_SERVICES} from "../../../../assets/data/servicesData.ts";
+import "./PricingCalculator.css";
 
 export const PricingCalculator = () => {
     const { ref, isVisible } = useScrollAnimation(0.1);
     const [selectedServices, setSelectedServices] = useState<SelectedService[]>([]);
     const [openDropdown, setOpenDropdown] = useState<string | null>(null);
-    const dropdownRef = useRef<HTMLDivElement>(null);
+    const dropdownRef = useRef<HTMLDivElement | null>(null);
 
     // Close dropdown when clicking outside
     useEffect(() => {
@@ -73,35 +74,37 @@ export const PricingCalculator = () => {
         setSelectedServices((prev) => prev.filter((s) => s.id !== id));
     }, []);
 
+    const calculateServicePrice = (serviceConfig: Service, selectedOptions: SelectedOptions): number => {
+        return serviceConfig.options.reduce((sum, option) => {
+            const selectedSubId = selectedOptions[option.id];
+            const sub = option.subOptions.find(s => s.id === selectedSubId);
+            return sum + (sub ? sub.price : 0);
+        }, serviceConfig.basePrice);
+    };
+
     const updateServiceOption = useCallback((serviceId: string, optionId: string, subOptionId: string) => {
-        setSelectedServices(prev => prev.map(service => {
+        const updateService = (service: SelectedService): SelectedService => {
             if (service.id !== serviceId) return service;
 
             const serviceConfig = AVAILABLE_SERVICES.find(s => s.id === service.serviceId);
             if (!serviceConfig) return service;
 
-            // Update selected sub-option for this option group
-                const updatedSelectedOptions = {
-                    ...service.selectedOptions,
-                    [optionId]: subOptionId,
-                };
+            const updatedSelectedOptions = {
+                ...service.selectedOptions,
+                [optionId]: subOptionId,
+            };
 
-                // Recalculate the total price of the service
-                const newPrice = serviceConfig.options.reduce((sum, option) => {
-                    const selectedSubId = updatedSelectedOptions[option.id];
-                    const sub = option.subOptions.find(s => s.id === selectedSubId);
+            const newPrice = calculateServicePrice(serviceConfig, updatedSelectedOptions);
 
-                    return sum + (sub ? sub.price : 0);
-                    }, serviceConfig.basePrice);
+            return {
+                ...service,
+                selectedOptions: updatedSelectedOptions,
+                price: newPrice,
+            };
+        };
 
-                return {
-                    ...service,
-                    selectedOptions: updatedSelectedOptions,
-                    price: newPrice,
-                };
-        }));
-        }, []
-    );
+        setSelectedServices(prev => prev.map(updateService));
+    }, []);
 
     // Memoized calculations
     const { monthlyPrice, annualPrice, annualSavings } = useMemo(() => {
@@ -130,10 +133,10 @@ export const PricingCalculator = () => {
           <div ref={ref} className={`space-y-8 transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
               {/* Calculator Header */}
               <div className="text-center mb-12">
-                  <h2 className="text-3xl sm:text-4xl font-bold text-secondary-dark mb-4">
+                  <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-primary-light dark:from-secondary-dark dark:to-secondary bg-clip-text text-transparent">
                       Custom Pricing Calculator
                   </h2>
-                  <p className="text-gray-300 text-lg">
+                  <p className="text-gray-800 dark:text-gray-300 text-lg">
                       Build your perfect plan by selecting the services you need
                   </p>
               </div>
@@ -153,18 +156,18 @@ export const PricingCalculator = () => {
                           </button>
 
                           {openDropdown === 'add-service' && availableServicesToAdd.length > 0 && (
-                              <div className="absolute top-full left-0 mt-2 w-full md:w-96 bg-slate-800 border border-cyan-500/30 rounded-lg shadow-2xl z-10">
+                              <div className="pricing-calculator-dropdown absolute top-full left-0 mt-2 w-full md:w-96 bg-white dark:bg-slate-800 border border-cyan-500/30 rounded-lg shadow-2xl z-10">
                                   <div className="p-2 max-h-96 overflow-y-auto space-y-1">
                                       {availableServicesToAdd.map((service) => (
                                           <button
                                               key={service.id}
                                               onClick={() => addService(service.id)}
-                                              className="w-full text-left px-4 py-3 rounded-lg hover:bg-slate-700/50 transition-colors group"
+                                              className="w-full text-left px-4 py-3 rounded-lg hover:bg-slate-200/50 dark:hover:bg-slate-700/50 transition-colors group"
                                           >
                                               <div className="flex items-center gap-3">
                                                   <span className="text-2xl">{service.icon}</span>
                                                   <div>
-                                                      <p className="text-white font-semibold group-hover:text-cyan-400 transition-colors">
+                                                      <p className="text-gray-800 dark:text-white font-semibold group-hover:text-secondary-light dark:group-hover:text-cyan-400 transition-colors">
                                                           {service.name}
                                                       </p>
                                                       <p className="text-gray-400 text-sm">
@@ -187,8 +190,8 @@ export const PricingCalculator = () => {
 
                       {/* Selected Services */}
                       {selectedServices.length === 0 ? (
-                          <div className="bg-slate-800/50 border-2 border-dashed border-gray-600 rounded-xl p-12 text-center">
-                              <p className="text-gray-400 text-lg">
+                          <div className=" bg-white dark:bg-slate-800/50 border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-xl p-12 text-center">
+                              <p className="text-gray-800 dark:text-gray-400 text-lg">
                                   No services selected yet. Click "Add Service" to get started.
                               </p>
                           </div>
@@ -221,37 +224,6 @@ export const PricingCalculator = () => {
                   />
               </div>
           </div>
-          <style>{`
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-            transform: translateY(10px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        
-        @keyframes slideDown {
-          from {
-            opacity: 0;
-            transform: translateY(-10px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        
-        .animate-fadeIn {
-          animation: fadeIn 0.3s ease-out;
-        }
-        
-        .animate-slideDown {
-          animation: slideDown 0.2s ease-out;
-        }
-      `}</style>
       </section>
   );
 };

@@ -12,12 +12,12 @@ export const PricingSummary = ({selectedServices, monthlyPrice, annualPrice, ann
     return (
         <div className="lg:col-span-1">
             <div
-                className="sticky top-24 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border-2 border-cyan-500/30 rounded-2xl p-8 backdrop-blur-sm">
-                <h3 className="text-xl font-bold text-white mb-6">Pricing Summary</h3>
+                className="sticky top-24 bg-gradient-to-br to-[#60a5fa] from-primary-light dark:from-cyan-500/10 dark:to-blue-500/10 border-2 border-cyan-500/30 rounded-2xl p-8 backdrop-blur-sm">
+                <h3 className="text-xl font-bold text-white">Pricing Summary</h3>
 
                 <div className="space-y-4 mb-8 pb-8 border-b border-cyan-500/20">
                     {selectedServices.length === 0 ? (
-                        <p className="text-gray-400 text-center py-4">
+                        <p className="text-gray-700 dark:text-gray-400 text-center mt-4">
                             Add services to see pricing
                         </p>
                     ) : (
@@ -25,9 +25,9 @@ export const PricingSummary = ({selectedServices, monthlyPrice, annualPrice, ann
                             {selectedServices.map((service) => (
                                 <div
                                     key={service.id}
-                                    className="flex items-center justify-between text-sm"
+                                    className="flex items-center justify-between text-sm mt-8"
                                 >
-                                    <span className="text-gray-300">{service.serviceName}</span>
+                                    <span className="text-gray-200">{service.serviceName}</span>
                                     <span className="text-white font-semibold">
                                                   ${service.price}
                                               </span>
@@ -39,11 +39,11 @@ export const PricingSummary = ({selectedServices, monthlyPrice, annualPrice, ann
 
                 <div className="space-y-3 mb-8">
                     <div className="flex items-center justify-between">
-                        <span className="text-gray-300">Monthly</span>
+                        <span className="text-gray-200">Monthly</span>
                         <span className="text-2xl font-bold text-white">${monthlyPrice}</span>
                     </div>
                     <div className="flex items-center justify-between text-sm">
-                        <span className="text-gray-400">Annual (16% off)</span>
+                        <span className="text-gray-700 dark:text-gray-400">Annual (16% off)</span>
                         <span className="text-lg font-semibold text-secondary-light">
                             ${annualDiscounted}/year
                         </span>
@@ -60,7 +60,7 @@ export const PricingSummary = ({selectedServices, monthlyPrice, annualPrice, ann
                     Get Started
                 </button>
 
-                <p className="text-xs text-gray-400 text-center mt-4">
+                <p className="text-xs text-black dark:text-gray-400 text-center hover:cursor-pointer hover:underline mt-4">
                     Start your 14-day free trial today
                 </p>
             </div>
