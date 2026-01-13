@@ -57,7 +57,7 @@ export const Navbar = ({onLinkClick}: NavbarProps) => {
 
                 {/* Mobile Menu Toggle */}
                 <button
-                    className="lg:hidden p-2 hover:bg-gray-800 rounded-md transition-colors"
+                    className="lg:hidden p-2 hover:bg-gray-300 dark:hover:bg-gray-800 rounded-md transition-colors"
                     onClick={toggleMobileMenu}
                     aria-expanded={isMobileMenuOpen}
                 >

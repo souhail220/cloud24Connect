@@ -18,7 +18,8 @@ export const MobileMenu = ({isOpen, onLinkClick}: {
                     {NAV_ITEMS.map((item) => (
                         <li key={item.id}>
                             <button onClick={() => setOpenDropdown(openDropdown === item.id ? 0 : item.id)}
-                                className="w-full flex items-center justify-between px-4 py-3 rounded-md hover:bg-primary-dark hover:text-orange-400 transition-colors text-left"
+                                className="w-full flex items-center justify-between px-4 py-3 rounded-md hover:bg-gray-200
+                                dark:hover:bg-primary-dark hover:text-orange-400 transition-colors text-left"
                             >
                                 {item.label}
                                 <ChevronDown size={16} className={`transition-transform ${openDropdown === item.id ? "rotate-180" : ""}`}/>
