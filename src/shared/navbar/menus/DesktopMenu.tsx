@@ -16,7 +16,7 @@ export const DesktopMenu = ({onLinkClick}: DesktopMenuProps) => {
             {NAV_ITEMS.map((item) => (
                 <Link to={item.link} key={item.id} className="relative group">
                     <button
-                        className="flex items-center gap-1 px-4 py-2 rounded-md hover:text-secondary hover:bg-gray-800 transition-colors text-xs xl:text-md"
+                        className="flex items-center gap-1 px-4 py-2 rounded-md hover:text-secondary hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-xs xl:text-md"
                         onMouseEnter={() => setOpenDropdown(item.id)}
                     >
                         {item.label}
