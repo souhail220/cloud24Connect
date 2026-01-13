@@ -56,8 +56,8 @@ export const ProductDetailsLayout = () => {
                     {testimonials.length > 0 && (
                         <div>
                             <div className="mb-12">
-                                <h2 className="text-3xl font-bold text-secondary mb-2">Customer Testimonials</h2>
-                                <p className="text-white">See what our satisfied customers have to say</p>
+                                <h2 className="text-3xl font-bold text-primary dark:text-secondary mb-2">Customer Testimonials</h2>
+                                <p className="text-gray-800 dark:text-white">See what our satisfied customers have to say</p>
                             </div>
                             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                                 {testimonials.map((testimonial) => (

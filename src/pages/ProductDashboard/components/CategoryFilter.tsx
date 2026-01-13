@@ -36,9 +36,9 @@ export const CategoryFilter = ({
                             onCategoryChange(null);
                             onSubCategoryChange(null);
                         }}
-                        className={`px-4 py-2 rounded-full border-0 hover:border-secondary font-medium transition-all duration-300 ${
+                        className={`px-4 py-2 rounded-full border hover:border-primary-light dark:hover:border-secondary font-medium transition-all duration-300 ${
                             selectedCategory === null
-                                ? 'bg-secondary-dark text-white shadow-lg'
+                                ? 'bg-primary dark:bg-secondary-dark text-white shadow-lg'
                                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                         }`}
                     >
@@ -51,9 +51,9 @@ export const CategoryFilter = ({
                                 onCategoryChange(selectedCategory === category.id ? null : category.id);
                                 onSubCategoryChange(null);
                             }}
-                            className={`px-4 py-2 rounded-full hover:border-secondary font-medium transition-all duration-300 ${
+                            className={`px-4 py-2 rounded-full hover:border-primary-light dark:hover:border-secondary font-medium transition-all duration-300 ${
                                 selectedCategory === category.id
-                                    ? 'bg-secondary-dark text-white shadow-lg'
+                                    ? 'bg-primary dark:bg-secondary-dark text-white shadow-lg'
                                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                             }`}
                         >
@@ -87,7 +87,7 @@ export const CategoryFilter = ({
                                 }
                                 className={`px-4 py-2 rounded-full font-medium transition-all duration-300 ${
                                     selectedSubCategory === subCategory.id
-                                        ? 'bg-primary text-white shadow-lg'
+                                        ? 'bg-primary-light text-white shadow-lg'
                                         : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                                 }`}
                             >

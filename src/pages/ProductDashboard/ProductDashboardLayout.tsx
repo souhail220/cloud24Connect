@@ -42,7 +42,7 @@ const ProductDashboard = () => {
                             <h1 className="text-4xl sm:text-5xl font-bold text-secondary mb-2">
                                 Product Dashboard
                             </h1>
-                            <p className="text-white">Browse and filter our complete product catalog</p>
+                            <p className="text-gray-800 dark:text-white">Browse and filter our complete product catalog</p>
                         </div>
 
                         {/* Search Bar */}
@@ -54,7 +54,7 @@ const ProductDashboard = () => {
                                     placeholder="Search products..."
                                     value={searchQuery}
                                     onChange={(e) => setSearchQuery(e.target.value)}
-                                    className="w-full pl-12 pr-4 py-3 rounded-lg bg-slate-700/50 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent transition-all duration-300"
+                                    className="w-full pl-12 pr-4 py-3 rounded-lg bg-white dark:bg-slate-700/50 border border-gray-600 text-gray-800 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent transition-all duration-300"
                                 />
                                 {searchQuery && (
                                     <button
@@ -79,9 +79,9 @@ const ProductDashboard = () => {
                         </div>
 
                         {/* Results Count */}
-                        <div className="mb-6 text-sm text-white">
-                            Showing <span className="font-semibold text-secondary">{filteredProducts.length}</span> of{' '}
-                            <span className="font-semibold text-secondary">{PRODUCTS.length}</span> products
+                        <div className="mb-6 text-sm text-gray-800 dark:text-white">
+                            Showing <span className="font-semibold text-primary dark:text-secondary">{filteredProducts.length}</span> of{' '}
+                            <span className="font-semibold text-primary dark:text-secondary">{PRODUCTS.length}</span> products
                         </div>
 
                         {/* Products Grid */}
