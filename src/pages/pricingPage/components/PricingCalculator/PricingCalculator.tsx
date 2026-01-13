@@ -133,7 +133,7 @@ export const PricingCalculator = () => {
                   <h2 className="text-3xl sm:text-4xl font-bold text-secondary-dark mb-4">
                       Custom Pricing Calculator
                   </h2>
-                  <p className="text-gray-300 text-lg">
+                  <p className="text-gray-600 dark:text-gray-300 text-lg">
                       Build your perfect plan by selecting the services you need
                   </p>
               </div>
@@ -153,21 +153,21 @@ export const PricingCalculator = () => {
                           </button>
 
                           {openDropdown === 'add-service' && availableServicesToAdd.length > 0 && (
-                              <div className="absolute top-full left-0 mt-2 w-full md:w-96 bg-slate-800 border border-cyan-500/30 rounded-lg shadow-2xl z-10">
+                              <div className="absolute top-full left-0 mt-2 w-full md:w-96 bg-white dark:bg-slate-800 border border-gray-200 dark:border-cyan-500/30 rounded-lg shadow-2xl z-10">
                                   <div className="p-2 max-h-96 overflow-y-auto space-y-1">
                                       {availableServicesToAdd.map((service) => (
                                           <button
                                               key={service.id}
                                               onClick={() => addService(service.id)}
-                                              className="w-full text-left px-4 py-3 rounded-lg hover:bg-slate-700/50 transition-colors group"
+                                              className="w-full text-left px-4 py-3 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-700/50 transition-colors group"
                                           >
                                               <div className="flex items-center gap-3">
                                                   <span className="text-2xl">{service.icon}</span>
                                                   <div>
-                                                      <p className="text-white font-semibold group-hover:text-cyan-400 transition-colors">
+                                                      <p className="text-gray-900 dark:text-white font-semibold group-hover:text-secondary dark:group-hover:text-cyan-400 transition-colors">
                                                           {service.name}
                                                       </p>
-                                                      <p className="text-gray-400 text-sm">
+                                                      <p className="text-gray-600 dark:text-gray-400 text-sm">
                                                           {service.description}
                                                       </p>
                                                   </div>
@@ -179,16 +179,16 @@ export const PricingCalculator = () => {
                           )}
 
                           {openDropdown === 'add-service' && availableServicesToAdd.length === 0 && (
-                              <div className="absolute top-full left-0 mt-2 w-full md:w-96 bg-slate-800 border border-cyan-500/30 rounded-lg shadow-2xl z-10 p-4">
-                                  <p className="text-gray-400 text-center">All services added!</p>
+                              <div className="absolute top-full left-0 mt-2 w-full md:w-96 bg-white dark:bg-slate-800 border border-gray-200 dark:border-cyan-500/30 rounded-lg shadow-2xl z-10 p-4">
+                                  <p className="text-gray-600 dark:text-gray-400 text-center">All services added!</p>
                               </div>
                           )}
                       </div>
 
                       {/* Selected Services */}
                       {selectedServices.length === 0 ? (
-                          <div className="bg-slate-800/50 border-2 border-dashed border-gray-600 rounded-xl p-12 text-center">
-                              <p className="text-gray-400 text-lg">
+                          <div className="bg-gray-50 dark:bg-slate-800/50 border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-xl p-12 text-center">
+                              <p className="text-gray-600 dark:text-gray-400 text-lg">
                                   No services selected yet. Click "Add Service" to get started.
                               </p>
                           </div>

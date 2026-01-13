@@ -11,13 +11,13 @@ interface ServiceCardProps {
 export const ServiceCard = ({service, serviceConfig, onRemove, onUpdateOption}: ServiceCardProps) => {
     return (
         <div
-            className="bg-slate-800/50 border border-gray-600 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300 animate-fadeIn">
+            className="bg-gray-50 dark:bg-slate-800/50 border border-gray-200 dark:border-gray-600 rounded-xl p-6 hover:border-gray-300 dark:hover:border-cyan-500/50 transition-all duration-300 animate-fadeIn">
             <div className="flex items-start justify-between gap-4">
                 <div className="flex-1">
                     <div className="flex items-center gap-3 mb-4">
                         <span className="text-2xl">{serviceConfig?.icon}</span>
                         <div>
-                            <h3 className="text-white font-semibold">
+                            <h3 className="text-gray-900 dark:text-white font-semibold">
                                 {service.serviceName}
                             </h3>
                         </div>
@@ -30,7 +30,7 @@ export const ServiceCard = ({service, serviceConfig, onRemove, onUpdateOption}: 
                             return (
                                 <div key={option.id} className="flex items-center gap-2">
                                     <label
-                                        className="text-gray-400 text-sm"
+                                        className="text-gray-600 dark:text-gray-400 text-sm"
                                         htmlFor={`option-${service.id}-${option.id}`}
                                     >
                                         {option.label}:
@@ -42,7 +42,7 @@ export const ServiceCard = ({service, serviceConfig, onRemove, onUpdateOption}: 
                                         onChange={(e) =>
                                             onUpdateOption(service.id, option.id, e.target.value)
                                         }
-                                        className="bg-slate-700 border border-gray-600 text-white rounded-lg p-2 text-sm focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent transition-all"
+                                        className="bg-white dark:bg-slate-700 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-lg p-2 text-sm focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent transition-all"
                                     >
                                         <option value="" disabled>Select an option</option>
                                         {option.subOptions.map((subOption) => (
@@ -58,12 +58,12 @@ export const ServiceCard = ({service, serviceConfig, onRemove, onUpdateOption}: 
                 </div>
 
                 <div className="text-right flex flex-col items-end gap-3">
-                    <p className="text-2xl font-bold text-secondary-lightc">
+                    <p className="text-2xl font-bold text-secondary-light">
                         ${service.price}
                     </p>
                     <button
                         onClick={() => onRemove(service.id)}
-                        className="p-2 text-red-400 hover:bg-red-500/10 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-red-500"
+                        className="p-2 text-red-500 dark:text-red-400 hover:bg-red-100 dark:hover:bg-red-500/10 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-red-500"
                         title="Remove service"
                         aria-label={`Remove ${service.serviceName}`}
                     >
