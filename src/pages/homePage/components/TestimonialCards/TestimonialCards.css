@@ -95,7 +95,7 @@
 }
 
 .card1 {
-    background-image: url('../../../../assets/images/tromba.jpg');
+    background-image: url('../../../../assets/images/sponsors/tromba.jpg');
 }
 
 .card1::before {
@@ -110,7 +110,7 @@
 }
 
 .card2 {
-    background-image: url('../../../../assets/images/putin.jpg');
+    background-image: url('../../../../assets/images/sponsors/putin.jpg');
 }
 
 .card2::before {
@@ -134,7 +134,7 @@
 }
 
 .card4 {
-    background-image: url('../../../../assets/images/tromba.jpg');
+    background-image: url('../../../../assets/images/sponsors/tromba.jpg');
 }
 
 .card4::before {

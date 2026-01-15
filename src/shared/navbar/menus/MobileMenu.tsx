@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { NAV_ITEMS } from "../../../assets/data/navItems.ts";
 import { Dropdown } from "../Dropdown";
+import {Link} from "react-router-dom";
 
 export const MobileMenu = ({isOpen, onLinkClick}: {
     isOpen: boolean,
@@ -16,7 +17,7 @@ export const MobileMenu = ({isOpen, onLinkClick}: {
             <div className="px-6 py-4">
                 <ul className="flex flex-col gap-2 text-sm font-medium">
                     {NAV_ITEMS.map((item) => (
-                        <li key={item.id}>
+                        <Link to={item.link} key={item.id}>
                             <button onClick={() => setOpenDropdown(openDropdown === item.id ? 0 : item.id)}
                                 className="w-full flex items-center justify-between px-4 py-3 rounded-md hover:bg-gray-200
                                 dark:hover:bg-primary-dark hover:text-orange-400 transition-colors text-left"
@@ -30,7 +31,7 @@ export const MobileMenu = ({isOpen, onLinkClick}: {
                                     <Dropdown onLinkClick={onLinkClick} items={item.dropdownItems ?? []} />
                                 </div>
                             )}
-                        </li>
+                        </Link>
                     ))}
                 </ul>
             </div>

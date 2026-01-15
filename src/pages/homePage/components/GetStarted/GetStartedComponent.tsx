@@ -1,9 +1,9 @@
 import "./GetStarted.css"
-import visaLogo from '../../../../assets/images/visa.png';
-import toyotaLogo from '../../../../assets/images/toyota.png';
-import grokLogo from '../../../../assets/images/grok.png';
-import appleLogo from '../../../../assets/images/apple.png';
-import teamCherryLogo from '../../../../assets/images/teamCherry.png';
+import visaLogo from '../../../../assets/images/sponsors/visa.png';
+import toyotaLogo from '../../../../assets/images/sponsors/toyota.png';
+import grokLogo from '../../../../assets/images/sponsors/grok.png';
+import appleLogo from '../../../../assets/images/sponsors/apple.png';
+import teamCherryLogo from '../../../../assets/images/sponsors/teamCherry.png';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import {useScrollAnimation} from "../../../../hooks/useScrollAnimation.ts";
 

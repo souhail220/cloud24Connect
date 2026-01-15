@@ -133,7 +133,7 @@ export const PricingCalculator = () => {
           <div ref={ref} className={`space-y-8 transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
               {/* Calculator Header */}
               <div className="text-center mb-12">
-                  <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-primary-light dark:from-secondary-dark dark:to-secondary bg-clip-text text-transparent">
+                  <h2 className="text-3xl sm:text-4xl font-bold mb-4 p-2 bg-gradient-to-r from-primary to-primary-light dark:from-secondary-dark dark:to-secondary bg-clip-text text-transparent">
                       Custom Pricing Calculator
                   </h2>
                   <p className="text-gray-800 dark:text-gray-300 text-lg">

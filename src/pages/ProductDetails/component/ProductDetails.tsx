@@ -8,8 +8,10 @@ interface ProductDetailsProps {
 export const ProductDetails = ({product}: ProductDetailsProps) => {
     const Icon: ComponentType<SVGProps<SVGSVGElement>> = product.icon;
     return (
-        <div className="p-2 grid md:grid-cols-2 gap-8 items-start">
-            <div className="flex justify-center items-center overflow-hidden bg-white p-6 min-h-full md:h-auto rounded-xl">
+        <div className="p-0 grid md:grid-cols-2 gap-8 items-start">
+            <div className="flex justify-center items-center overflow-hidden
+            bg-gradient-to-r from-primary-light to-[#60a5fa] dark:from-primary dark:to-primary-light p-6 min-h-full md:h-auto rounded-xl"
+            >
                 <img src={product.image} alt={product.name}
                      className="w-full h-full object-cover rounded-xl hover:scale-105 transition-transform duration-500"
                 />

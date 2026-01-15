@@ -1,5 +1,5 @@
 import type {ComponentType, SVGProps} from "react";
-import {Activity, BarChart3, Cloud, Shield, Zap} from "lucide-react";
+import {Activity, Cloud, Copy, Database, Mail, Network, Settings, Shield, Wrench, Zap} from "lucide-react";
 
 export interface SubCategory {
     id: string;
@@ -26,48 +26,55 @@ export interface Category {
 
 export const CATEGORIES: Category[] = [
     {
-        id: 'cloud',
-        name: 'Seamless Cloud Integration',
+        id: 'hosting',
+        name: 'Hosting Services',
         subCategories: [
-            { id: 'multi-cloud', name: 'Multi-Cloud' },
-            { id: 'hybrid', name: 'Hybrid' },
-            { id: 'migration', name: 'Migration Tools' },
+            { id: 'vps', name: 'VPS' },
+            { id: 'email', name: 'Email Hosting' },
         ],
     },
     {
-        id: 'analytics',
-        name: 'Data Analytics',
+        id: 'control-panel',
+        name: 'Control Panel',
         subCategories: [
-            { id: 'real-time', name: 'Real-Time' },
-            { id: 'reporting', name: 'Reporting' },
-            { id: 'visualization', name: 'Visualization' },
+            { id: 'cpanel', name: 'cPanel' },
+            { id: 'plesk', name: 'Plesk' },
+            { id: 'cloudlinux', name: 'CloudLinux' },
+        ],
+    },
+    {
+        id: 'backup',
+        name: 'Backup & Disaster Recovery',
+        subCategories: [
+            { id: 'backup-service', name: 'Backup As A Service' },
+            { id: 'disaster-recovery', name: 'Disaster Recovery' },
         ],
     },
     {
         id: 'security',
-        name: 'Security Suite',
+        name: 'Security',
         subCategories: [
-            { id: 'threat-detection', name: 'Threat Detection' },
-            { id: 'compliance', name: 'Compliance' },
-            { id: 'encryption', name: 'Encryption' },
+            { id: 'ssl', name: 'SSL Certificates' },
+            { id: 'waf', name: 'WAF' },
+            { id: 'antivirus', name: 'Antivirus' },
+            { id: 'vpn', name: 'VPN' },
         ],
     },
     {
-        id: 'monitoring',
-        name: 'Monitoring Tools',
+        id: 'licenses',
+        name: 'Licences',
         subCategories: [
-            { id: 'infrastructure', name: 'Infrastructure' },
-            { id: 'performance', name: 'Performance' },
-            { id: 'alerting', name: 'Alerting' },
+            { id: 'microsoft', name: 'Microsoft' },
         ],
     },
     {
-        id: 'computing',
-        name: 'Computing',
+        id: 'managed-services',
+        name: 'Managed Services',
         subCategories: [
-            { id: 'containers', name: 'Containers' },
-            { id: 'serverless', name: 'Serverless' },
-            { id: 'virtual-machines', name: 'Virtual Machines' },
+            { id: 'network-design', name: 'Network Design' },
+            { id: 'infrastructure', name: 'Infrastructure Management' },
+            { id: 'migration', name: 'Migration Services' },
+            { id: 'monitoring', name: 'Monitoring' },
         ],
     },
 ];
@@ -75,152 +82,152 @@ export const CATEGORIES: Category[] = [
 export const PRODUCTS: Product[] = [
     {
         id: 'p1',
-        name: 'CloudSync Pro',
-        category: 'Seamless Cloud Integration',
-        subCategory: 'Multi-Cloud',
-        price: '$99/mo',
-        description: 'Seamless synchronization across multiple cloud providers with intelligent routing.',
+        name: 'VPS Hosting',
+        category: 'Hosting Services',
+        subCategory: 'VPS',
+        price: '$29/mo',
+        description: 'High-performance virtual private servers with full root access and dedicated resources.',
         icon: Cloud,
-        image: new URL("../images/productImages/cloudSync.png", import.meta.url).href
+        image: new URL("../images/productImages/vps_transparent.webp", import.meta.url).href
     },
     {
         id: 'p2',
-        name: 'HybridLink',
-        category: 'Seamless Cloud Integration',
-        subCategory: 'Hybrid',
-        price: '$149/mo',
-        description: 'Connect on-premise infrastructure with cloud services effortlessly.',
-        icon: Cloud,
-        image: new URL("../images/productImages/hybridLink.png", import.meta.url).href
+        name: 'Email Hosting',
+        category: 'Hosting Services',
+        subCategory: 'Email Hosting',
+        price: '$5/mo',
+        description: 'Professional email hosting with spam protection and advanced filtering.',
+        icon: Mail,
+        image: new URL("../images/productImages/MailHosting.webp", import.meta.url).href
     },
     {
         id: 'p3',
-        name: 'MigrateFlow',
-        category: 'Seamless Cloud Integration',
-        subCategory: 'Migration Tools',
-        price: '$199/mo',
-        description: 'Automated cloud migration with zero downtime and full data integrity.',
-        icon: Cloud,
-        image: "gg"
+        name: 'cPanel Control Panel',
+        category: 'Control Panel',
+        subCategory: 'cPanel',
+        price: '$15/mo',
+        description: 'Industry-leading control panel with intuitive interface for server management.',
+        icon: Settings,
+        image: new URL("../images/productImages/Serveur Cpanel.webp", import.meta.url).href
     },
     {
         id: 'p4',
-        name: 'InsightLive',
-        category: 'Data Analytics',
-        subCategory: 'Real-Time',
-        price: '$149/mo',
-        description: 'Real-time data analytics with instant insights and custom dashboards.',
-        icon: BarChart3,
-        image: "gg"
+        name: 'Plesk Control Panel',
+        category: 'Control Panel',
+        subCategory: 'Plesk',
+        price: '$18/mo',
+        description: 'Modern control panel with powerful automation and multi-OS support.',
+        icon: Settings,
+        image: new URL("../images/productImages/Plesk.webp", import.meta.url).href
     },
     {
         id: 'p5',
-        name: 'ReportMax',
-        category: 'Data Analytics',
-        subCategory: 'Reporting',
-        price: '$89/mo',
-        description: 'Comprehensive reporting suite with automated schedules and templates.',
-        icon: BarChart3,
-        image: "gg"
+        name: 'CloudLinux OS',
+        category: 'Control Panel',
+        subCategory: 'CloudLinux',
+        price: '$12/mo',
+        description: 'Stable, secure operating system optimized for hosting environments.',
+        icon: Zap,
+        image: new URL("../images/productImages/Cloud_Linux.webp", import.meta.url).href
     },
     {
         id: 'p6',
-        name: 'VisualData',
-        category: 'Data Analytics',
-        subCategory: 'Visualization',
-        price: '$129/mo',
-        description: 'Transform raw data into stunning visual representations.',
-        icon: BarChart3,
-        image: "gg"
+        name: 'Backup As A Service',
+        category: 'Backup & Disaster Recovery',
+        subCategory: 'Backup As A Service',
+        price: '$49/mo',
+        description: 'Automated daily backups with unlimited storage and instant restore capability.',
+        icon: Copy,
+        image: new URL("../images/productImages/Backup_storage.webp", import.meta.url).href
     },
     {
         id: 'p7',
-        name: 'ThreatShield',
-        category: 'Security Suite',
-        subCategory: 'Threat Detection',
-        price: '$249/mo',
-        description: 'Advanced threat detection with AI-powered anomaly detection.',
-        icon: Shield,
-        image: "gg"
+        name: 'Disaster Recovery',
+        category: 'Backup & Disaster Recovery',
+        subCategory: 'Disaster Recovery',
+        price: '$99/mo',
+        description: 'Complete disaster recovery solution with RTO and RPO guarantees.',
+        icon: Database,
+        image: new URL("../images/productImages/Disaster_recovery.webp", import.meta.url).href
     },
     {
         id: 'p8',
-        name: 'ComplianceHub',
-        category: 'Security Suite',
-        subCategory: 'Compliance',
-        price: '$199/mo',
-        description: 'Automated compliance monitoring for GDPR, HIPAA, SOC 2 and more.',
+        name: 'SSL Certificates',
+        category: 'Security',
+        subCategory: 'SSL Certificates',
+        price: '$49/year',
+        description: 'Industry-standard SSL certificates for secure HTTPS connections.',
         icon: Shield,
-        image: "gg"
+        image: new URL("../images/productImages/ssl-gateway.webp", import.meta.url).href
     },
     {
         id: 'p9',
-        name: 'CryptoGuard',
-        category: 'Security Suite',
-        subCategory: 'Encryption',
+        name: 'Web Application Firewall',
+        category: 'Security',
+        subCategory: 'WAF',
         price: '$79/mo',
-        description: 'Enterprise-grade encryption for data at rest and in transit.',
+        description: 'Advanced WAF protection against OWASP top 10 and DDoS attacks.',
         icon: Shield,
-        image: "gg"
+        image: new URL("../images/productImages/waf.webp", import.meta.url).href
     },
     {
         id: 'p10',
-        name: 'InfraWatch',
-        category: 'Monitoring Tools',
-        subCategory: 'Infrastructure',
-        price: '$119/mo',
-        description: 'Monitor infrastructure health across all your cloud resources.',
-        icon: Activity,
-        image: "gg"
+        name: 'Antivirus Protection',
+        category: 'Security',
+        subCategory: 'Antivirus',
+        price: '$19/mo',
+        description: 'Real-time malware detection and removal for servers and websites.',
+        icon: Shield,
+        image: new URL("../images/productImages/antivirus.png", import.meta.url).href
     },
     {
         id: 'p11',
-        name: 'PerfTrace',
-        category: 'Monitoring Tools',
-        subCategory: 'Performance',
-        price: '$139/mo',
-        description: 'Deep performance monitoring with automatic issue detection.',
-        icon: Activity,
-        image: "gg"
+        name: 'VPN Service',
+        category: 'Security',
+        subCategory: 'VPN',
+        price: '$9/mo',
+        description: 'Secure VPN with encryption and unlimited bandwidth across global servers.',
+        icon: Shield,
+        image: new URL("../images/productImages/vpn.webp", import.meta.url).href
     },
     {
         id: 'p12',
-        name: 'AlertSystem',
-        category: 'Monitoring Tools',
-        subCategory: 'Alerting',
-        price: '$59/mo',
-        description: 'Intelligent alerting system with multi-channel notifications.',
+        name: 'Microsoft Licenses',
+        category: 'Licences',
+        subCategory: 'Microsoft',
+        price: 'Custom',
+        description: 'Volume licensing for Microsoft Office, Windows Server, and enterprise solutions.',
         icon: Activity,
-        image: "gg"
+        image: new URL("../images/productImages/microsoft.png", import.meta.url).href
     },
     {
         id: 'p13',
-        name: 'ContainerOS',
-        category: 'Computing',
-        subCategory: 'Containers',
-        price: '$179/mo',
-        description: 'Complete container orchestration and management platform.',
-        icon: Zap,
-        image: "gg"
+        name: 'Network Design',
+        category: 'Managed Services',
+        subCategory: 'Network Design',
+        price: 'Custom',
+        description: 'Expert network architecture design and implementation services.',
+        icon: Network,
+        image: new URL("../images/productImages/network.webp", import.meta.url).href
     },
     {
         id: 'p14',
-        name: 'ServerlessEdge',
-        category: 'Computing',
-        subCategory: 'Serverless',
-        price: '$129/mo',
-        description: 'Deploy functions globally with zero server management.',
-        icon: Zap,
-        image: "gg"
+        name: 'Infrastructure Management',
+        category: 'Managed Services',
+        subCategory: 'Infrastructure Management',
+        price: 'Custom',
+        description: 'Comprehensive infrastructure management and monitoring 24/7.',
+        icon: Wrench,
+        image: new URL("../images/productImages/infrastructure.webp", import.meta.url).href
     },
     {
         id: 'p15',
-        name: 'VMCluster',
-        category: 'Computing',
-        subCategory: 'Virtual Machines',
-        price: '$159/mo',
-        description: 'High-performance virtual machine management and scaling.',
-        icon: Zap,
-        image: "gg"
+        name: 'Migration Services',
+        category: 'Managed Services',
+        subCategory: 'Migration Services',
+        price: 'Custom',
+        description: 'Mail, environment, and data migration services with zero downtime.',
+        icon: Copy,
+        image: new URL("../images/productImages/Migration_Service.webp", import.meta.url).href
     },
 ];

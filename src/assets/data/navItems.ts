@@ -119,33 +119,33 @@ export const NAV_ITEMS: NavItem[] = [
         dropdownItems: [
             {
                 title: 'Cloud Connect',
-                description: 'Seamless cloud integration',
+                description: 'Hosting Services',
                 icon: '☁️',
-                link: '/products/dashboard'
+                link: '/products/dashboard?category=hosting'
             },
             {
-                title: 'Data Analytics',
-                description: 'Powerful insights from your data',
+                title: 'Control Panel',
+                description: 'Powerful Interfaces to manage your servers',
                 icon: '📊',
-                link: '/products/dashboard'
+                link: '/products/dashboard?category=control-panel'
             },
             {
                 title: 'Security Suite',
                 description: 'Enterprise-grade protection',
                 icon: '🔒',
-                link: '/products/dashboard'
+                link: '/products/dashboard?category=security'
             },
             {
-                title: 'API Gateway',
-                description: 'Manage and secure your APIs',
+                title: 'Managed Services',
+                description: 'Manage you Services 24h',
                 icon: '🌐',
-                link: '/products/dashboard'
+                link: '/products/dashboard?category=managed-services'
             },
             {
-                title: 'Monitoring Tools',
-                description: 'Real-time system monitoring',
+                title: 'Disaster Recovery',
+                description: 'Backup & Disaster Recovery System',
                 icon: '📈',
-                link: '/products/dashboard'
+                link: '/products/dashboard?category=backup'
             }
         ]
     },

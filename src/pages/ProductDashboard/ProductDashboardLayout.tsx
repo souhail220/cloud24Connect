@@ -39,7 +39,7 @@ const ProductDashboard = () => {
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                         {/* Header */}
                         <div className="mb-12">
-                            <h1 className="text-4xl sm:text-5xl font-bold text-secondary mb-2">
+                            <h1 className="text-4xl sm:text-5xl font-bold mb-2 bg-gradient-to-r from-primary to-primary-light dark:from-secondary-dark dark:to-secondary bg-clip-text text-transparent">
                                 Product Dashboard
                             </h1>
                             <p className="text-gray-800 dark:text-white">Browse and filter our complete product catalog</p>
