@@ -22,7 +22,7 @@ export const NAV_ITEMS: NavItem[] = [
     {
         id: 1,
         label: 'Docs',
-        link: '/pricing',
+        link: '/docs',
         dropdownItems: [
             {
                 title: 'Getting Started',

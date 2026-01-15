@@ -18,8 +18,8 @@ export default function HeroSection() {
                         Transform Your Business
                         <br />
                         <span className="bg-gradient-to-r from-secondary via-blue-400 to-secondary-light bg-clip-text text-transparent">
-                        With Cloud Excellence
-                    </span>
+                            With Cloud Excellence
+                        </span>
                     </h1>
 
                     <p className="heading-description">
