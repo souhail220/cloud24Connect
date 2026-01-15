@@ -25,25 +25,25 @@ export const PlanCard = ({plan, isActive, onSelect}: PlanCardProps) => {
                     text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center gap-2"
                 >
                     <Zap className="w-4 h-4"/>
-                    Most Popular
+                    <p className="text-xs">Most Popular</p>
                 </div>
             )}
-            <h3 className="text-2xl font-bold text-black dark:text-white mb-2">
+            <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-black dark:text-white mb-2">
                 {plan.name}
             </h3>
 
-            <p className="text-gray-800 dark:text-gray-300 mb-6">{plan.description}</p>
+            <p className="text-gray-800 dark:text-gray-300 text-xs md:text-sm lg:text-xl mb-6">{plan.description}</p>
 
             <div className="flex items-end gap-1">
-                <span className="text-4xl font-bold text-primary-light dark:text-white">{plan.price}</span>
+                <span className="text-xl md:text-2xl lg:text-3xl font-bold text-primary-light dark:text-white">{plan.price}</span>
                 <span className="text-gray-800 dark:text-gray-400 text-lg">/month</span>
             </div>
 
             <ul className="mt-6 space-y-2 text-gray-300">
                 {plan.features.map(feature => (
                     <li key={feature.name} className="flex items-center text-gray-800 dark:text-gray-300 gap-2">
-                        <span className="w-2 h-2 bg-secondary rounded-full"></span>
-                        {feature.name}
+                        <span className="w-1.5 h-1.5 lg:w-2 lg:h-2 bg-secondary rounded-full"></span>
+                        <p className="text-start text-sm lg:text-lg">{feature.name}</p>
                     </li>
                 ))}
             </ul>

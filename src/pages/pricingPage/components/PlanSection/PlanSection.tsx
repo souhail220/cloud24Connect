@@ -79,7 +79,7 @@ export const PlanSection = ({selectedPlan, onSelect}: PlansSectionProps) => {
                         Choose the perfect plan for your infrastructure needs. Scale up as you grow.
                     </p>
                 </div>
-                <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-6">
+                <div className="mt-8 p-8 grid grid-cols-1 md:p-0 lg:p-0 md:grid-cols-3 gap-8 lg:gap-6">
                     {plans.map((plan) => (
                         <PlanCard
                             key={plan.id}
