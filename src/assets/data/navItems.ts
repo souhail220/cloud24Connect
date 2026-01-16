@@ -84,7 +84,7 @@ export const NAV_ITEMS: NavItem[] = [
     {
         id: 3,
         label: 'Contact Sales',
-        link: '/pricing',
+        link: '/sales',
         dropdownItems: [
             {
                 title: 'Request Demo',
