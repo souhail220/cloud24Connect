@@ -97,7 +97,7 @@ export const SignUpForm = () => {
                         type="text"
                         value={formData.fullName}
                         onChange={handleChange}
-                        className={`w-full px-4 py-3 bg-slate-700/50 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all ${
+                        className={`w-full px-4 py-3  bg-gray-100 dark:bg-slate-700/50 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all ${
                             errors.fullName ? 'border-red-500' : 'border-gray-600'
                         }`}
                         placeholder="John Doe"
@@ -117,7 +117,7 @@ export const SignUpForm = () => {
                         type="email"
                         value={formData.email}
                         onChange={handleChange}
-                        className={`w-full px-4 py-3 bg-slate-700/50 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all ${
+                        className={`w-full px-4 py-3 bg-gray-100 dark:bg-slate-700/50 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all ${
                             errors.email ? 'border-red-500' : 'border-gray-600'
                         }`}
                         placeholder="you@example.com"
@@ -138,7 +138,7 @@ export const SignUpForm = () => {
                             type={showPassword ? 'text' : 'password'}
                             value={formData.password}
                             onChange={handleChange}
-                            className={`w-full px-4 py-3 bg-slate-700/50 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all pr-12 ${
+                            className={`w-full px-4 py-3 bg-gray-100 dark:bg-slate-700/50 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all pr-12 ${
                                 errors.password ? 'border-red-500' : 'border-gray-600'
                             }`}
                             placeholder="Create a strong password"
@@ -146,7 +146,7 @@ export const SignUpForm = () => {
                         <button
                             type="button"
                             onClick={() => setShowPassword(!showPassword)}
-                            className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-300 transition-colors"
+                            className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-secondary dark:hover:text-gray-300 transition-colors"
                         >
                             {showPassword ? (
                                 <EyeOff className="w-5 h-5" />
@@ -171,7 +171,7 @@ export const SignUpForm = () => {
                             type={showConfirmPassword ? 'text' : 'password'}
                             value={formData.confirmPassword}
                             onChange={handleChange}
-                            className={`w-full px-4 py-3 bg-slate-700/50 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all pr-12 ${
+                            className={`w-full px-4 py-3 bg-gray-100 dark:bg-slate-700/50 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all pr-12 ${
                                 errors.confirmPassword ? 'border-red-500' : 'border-gray-600'
                             }`}
                             placeholder="Confirm your password"
@@ -179,7 +179,7 @@ export const SignUpForm = () => {
                         <button
                             type="button"
                             onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                            className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-300 transition-colors"
+                            className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-secondary dark:hover:text-gray-300 transition-colors"
                         >
                             {showConfirmPassword ? (
                                 <EyeOff className="w-5 h-5" />
@@ -236,8 +236,7 @@ export const SignUpForm = () => {
                     )}
                 </div>
 
-                <button
-                    type="submit"
+                <button type="submit"
                     className="w-full bg-gradient-to-r from-secondary-light to-secondary hover:from-secondary hover:to-secondary-dark  text-white font-semibold py-3 px-4 rounded-lg transition-all duration-200 transform hover:scale-105"
                 >
                     Create Account
@@ -249,7 +248,7 @@ export const SignUpForm = () => {
                     <div className="w-full border-t border-gray-600"></div>
                 </div>
                 <div className="relative flex justify-center text-sm">
-                    <span className="px-2 bg-slate-800 text-gray-400">Or sign up with</span>
+                    <span className="px-2 dark:bg-slate-800 text-gray-100 dark:text-gray-400">Or sign up with</span>
                 </div>
             </div>
 

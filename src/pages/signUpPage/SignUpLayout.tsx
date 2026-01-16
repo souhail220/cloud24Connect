@@ -13,7 +13,7 @@ const SignUpLayout = () => {
                 <div className="w-full xl:max-w-3xl lg:max-w-xl max-w-md">
                     <div
                         ref={ref}
-                        className={`bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 shadow-2xl border border-cyan-500/20
+                        className={`bg-gradient-to-r from-primary to-primary-light dark:from-slate-800/50 dark:to-slate-800/50  backdrop-blur-sm rounded-2xl p-8 shadow-2xl border border-cyan-500/20
                         transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}
                         `}>
                         <SignUpForm />
