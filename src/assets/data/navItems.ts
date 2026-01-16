@@ -53,7 +53,7 @@ export const NAV_ITEMS: NavItem[] = [
     {
         id: 2,
         label: 'Support',
-        link: '/pricing',
+        link: '/support',
         dropdownItems: [
             {
                 title: 'Help Center',

@@ -12,6 +12,7 @@ const LoginPageLayout = lazy(() => import("./pages/signUpPage/LoginPageLayout.ts
 const ProductDashboard = lazy(() => import("./pages/ProductDashboard/ProductDashboardLayout.tsx"));
 const DocsLayout = lazy(() => import("./pages/documentationPage/./DocHomePage"));
 const SalesHomePage = lazy(() => import("./pages/SalesPage/SalesHomePage.tsx"));
+const SupportPage = lazy(() => import("./pages/supportPage/SupportPage.tsx"));
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
                   <Route path="/products/:productId" element={<ProductDetailsLayout />} />
                   <Route path="/docs" element={<DocsLayout />} />
                   <Route path="/sales" element={<SalesHomePage />} />
+                  <Route path="/support" element={<SupportPage />} />
               </Routes>
           </ErrorBoundary>
       </Suspense>
